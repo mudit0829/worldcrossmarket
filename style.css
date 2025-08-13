@@ -763,4 +763,195 @@ body {
   .fueltrading-wallets-row {gap:12px;}
   .fueltrading-report-panel,.fueltrading-form-panel {min-width:0;}
 }
+--------------------Angel Investment ----------------------------------
+
+.angelinvestment-bg {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+}
+.angelinvestment-breadcrumb {
+  font-size: 14px;
+  color: #6e7285;
+  margin-bottom: 17px;
+}
+.angelinvestment-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.angelinvestment-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(54,91,181,0.10);
+  padding: 44px 44px 36px 44px;
+}
+.angelinvestment-notifybar {
+  background: #fff6c4;
+  border-radius: 10px;
+  color: #927900;
+  padding: 13px 17px;
+  font-size: 14.2px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  border: 1px solid #f5eab5;
+}
+.angelinvestment-notify-title {
+  font-size:15px;
+  font-weight:600;
+  color: #b79327;
+  margin-bottom:1px;
+  display:inline-block;
+}
+.angelinvestment-wallet-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 21px;
+}
+.angelinvestment-wallet {
+  background: #f7fafd;
+  border-radius: 14px;
+  flex: 1 1 220px;
+  padding: 16px 26px;
+  box-shadow: 0 2px 7px rgba(158,142,5,.09);
+  text-align: left;
+}
+.angelinvestment-wallet-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #382e05;
+  margin-bottom: 2px;
+}
+.angelinvestment-wallet-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #927900;
+}
+.angelinvestment-main-row {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  margin-top: 14px;
+}
+.angelinvestment-form-panel {
+  flex: 1.12 1 0;
+  min-width: 280px;
+}
+.angelinvestment-form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3365;
+  margin-bottom: 13px;
+}
+.angelinvestment-form-row {
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.angelinvestment-form-row label {
+  font-size:14px;
+  font-weight:500;
+  color:#927900;
+  margin-bottom:5px;
+}
+.angelinvestment-form-row input,
+.angelinvestment-form-row select {
+  font-size:15px;
+  border:1.2px solid #e7ddbe;
+  border-radius:8px;
+  background:#fefdeb;
+  color:#222;
+  padding:10.5px 13px;
+  margin-top:2px;
+  transition:border 0.17s;
+}
+.angelinvestment-form-row input:focus,
+.angelinvestment-form-row select:focus {
+  border-color:#a88d11;
+  outline:none;
+  background:#fffae3;
+}
+.angelinvestment-hint {
+  font-size: 12.2px;
+  color: #cb1f1f;
+  margin-top: 2px;
+  font-style: italic;
+}
+.angelinvestment-otp-btn {
+  background: #b79327;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 17px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2px;
+  box-shadow: 0 1px 7px rgba(83,67,2,0.09);
+  transition: background 0.15s;
+}
+.angelinvestment-otp-btn:hover {
+  background: #8a6811;
+}
+.angelinvestment-submit-btn {
+  background: #b79327;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 34px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top:13px;
+  float:right;
+  box-shadow: 0 2px 8px rgba(158,142,5,.10);
+  transition: background 0.16s;
+}
+.angelinvestment-submit-btn:hover {
+  background: #927900;
+}
+.angelinvestment-report-panel {
+  flex: 1.08 1 0;
+  min-width: 330px;
+  margin-left:6px;
+}
+.angelinvestment-report-title {
+  font-size: 16px;
+  color: #b79327;
+  font-weight: 600;
+  margin-bottom: 9px;
+  padding-left: 2px;
+}
+.angelinvestment-table {
+  width: 100%;
+  background: #fdfaea;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13.8px;
+  box-shadow: 0 1px 8px rgba(158,142,5,.07);
+}
+.angelinvestment-table th {
+  background: #faf4de;
+  color: #927900;
+  font-weight: 600;
+  padding: 8px 8px;
+  border-bottom: 1.5px solid #efe3b0;
+  font-size: 13.2px;
+}
+.angelinvestment-table td {
+  padding: 8px 8px;
+  color: #82713c;
+  background: #fefdeb;
+  border-bottom: 1px solid #f5eab5;
+}
+.angelinvestment-table tr:last-child td {
+  border-bottom:none;
+}
+@media (max-width:950px) {
+  .angelinvestment-bg {padding: 0 2vw;}
+  .angelinvestment-card {padding: 18px 2vw;}
+  .angelinvestment-main-row {flex-direction:column; gap:21px;}
+  .angelinvestment-wallet-row {gap:10px;}
+  .angelinvestment-report-panel,.angelinvestment-form-panel {min-width:0;}
+}
 
