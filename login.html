@@ -1,248 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WorldCrossMarket.ai - Login</title>
-  <style>
-    /* Reset & base */
-    body, html {
-      margin: 0; padding: 0; height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f8fc;
-      color: #333;
-    }
-    .login-wrapper {
-      display: flex;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-    /* Left side with illustration */
-    .login-left {
-      flex: 1;
-      background: url('asset/01.png') no-repeat center center/cover;
-      position: relative;
-    }
-    /* Optional overlay text on left side if needed */
-    .login-left::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 50, 0.15);
-      z-index: 1;
-    }
-    /* Right side with form */
-    .login-right {
-      flex: 1;
-      background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 48px 36px;
-      box-shadow: -12px 0 20px rgba(0,0,50,0.07);
-    }
-    .login-box {
-      position: relative;
-      width: 100%;
-      max-width: 380px;
-      z-index: 2;
-    }
-    /* Logo */
-    .logo {
-      display: block;
-      margin: 0 auto 24px;
-      width: 90px;
-    }
-    /* Welcome text */
-    .welcome-text {
-      text-align: center;
-      font-size: 28px;
-      font-weight: 700;
-      color: #005bb5;
-      margin-bottom: 32px;
-    }
-    .welcome-text span {
-      color: #ff6b00; /* accent color for part of text */
-    }
-    /* Inputs wrapper */
-    .input-group {
-      margin-bottom: 20px;
-    }
-    /* Inputs */
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      height: 44px;
-      font-size: 15px;
-      padding: 0 14px;
-      border-radius: 8px;
-      border: 1.5px solid #cbd5e0;
-      transition: border-color 0.3s ease;
-      box-sizing: border-box;
-      outline: none;
-    }
-    input[type="text"]:focus,
-    input[type="password"]:focus {
-      border-color: #005bb5;
-      box-shadow: 0 0 8px rgba(0, 91, 181, 0.3);
-    }
-    /* Captcha & remember container */
-    .checkbox-group {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
-      font-size: 14px;
-    }
-    .checkbox-group label {
-      cursor: pointer;
-      user-select: none;
-      display: flex;
-      align-items: center;
-      color: #444;
-    }
-    .checkbox-group input[type="checkbox"] {
-      margin-right: 8px;
-      width: 16px;
-      height: 16px;
-      accent-color: #ff6b00;
-      cursor: pointer;
-    }
-    /* Verify you are human label special */
-    .human-verify {
-      font-weight: 600;
-      color: #005bb5;
-    }
-    /* Button */
-    .btn-login {
-      width: 100%;
-      height: 48px;
-      background: #005bb5;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,91,181,0.2);
-    }
-    .btn-login:hover {
-      background: #004494;
-      box-shadow: 0 6px 12px rgba(0,68,148,0.3);
-    }
-    /* Links below button */
-    .links {
-      margin-top: 24px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
-    .links a {
-      color: #005bb5;
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    .links a:hover {
-      color: #ff6b00;
-      text-decoration: underline;
-    }
-    /* Responsive adjustments */
-    @media(max-width: 900px) {
-      .login-wrapper {
-        flex-direction: column;
-      }
-      .login-left, .login-right {
-        flex: none;
-        width: 100%;
-        height: 300px;
-      }
-      .login-right {
-        padding: 32px 24px;
-        box-shadow: none;
-      }
-      .login-box {
-        max-width: 100%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorldCrossMarket.ai - Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+}
+.login-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+.login-left {
+  flex: 1;
+  background: url('asset/01.png') center center/cover no-repeat;
+}
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+}
+.login-box {
+  width: 100%;
+  max-width: 380px;
+}
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 90px;
+}
+.welcome-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #005bb5;
+}
+.welcome-text span {
+  color: #ff6b00;
+}
+.input-group {
+  margin-bottom: 18px;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d9e6;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.input-group input:focus {
+  border-color: #005bb5;
+  box-shadow: 0 0 0 3px rgba(0,91,181,0.15);
+  outline: none;
+}
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox-group input {
+  margin-right: 6px;
+  accent-color: #ff6b00;
+}
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: #005bb5;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-login:hover {
+  background: #004494;
+}
+.links {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+.links a {
+  color: #005bb5;
+  text-decoration: none;
+  margin: 0 6px;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+  .login-left {
+    height: 200px;
+  }
+}
+</style>
 </head>
 <body>
 
-  <div class="login-wrapper">
+<div class="login-wrapper">
+  <!-- Left Panel -->
+  <div class="login-left"></div>
 
-    <!-- Left Image Panel -->
-    <div class="login-left" aria-label="Login illustration image">
-      <!-- Replace left-illustration.jpg with your image path -->
-    </div>
+  <!-- Right Panel -->
+  <div class="login-right">
+    <div class="login-box">
+      <img src="asset/logo.png" alt="WorldCrossMarket.ai Logo" class="logo">
+      <h2 class="welcome-text">Welcome to <span>WorldCrossMarket.ai</span></h2>
 
-    <!-- Right Login Form Panel -->
-    <div class="login-right" role="main">
-      <div class="login-box" role="form" aria-labelledby="loginHeading">
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Enter Username">
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Enter Password">
+      </div>
 
-        <img src="asset/logo.png" alt="WorldCrossMarket.ai Logo" class="logo" />
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="remember">Remember me</label>
+        <label><input type="checkbox" id="human">Verify you are human</label>
+      </div>
 
-        <h1 class="welcome-text" id="loginHeading">
-          Welcome to <span>WorldCrossMarket.ai!</span>
-        </h1>
+      <button class="btn-login" onclick="login()">Sign In</button>
 
-        <div class="input-group">
-          <input type="text" id="username" name="username" placeholder="Enter Username" aria-required="true" aria-label="Username" />
-        </div>
-
-        <div class="input-group">
-          <input type="password" id="password" name="password" placeholder="Enter Password" aria-required="true" aria-label="Password" />
-        </div>
-
-        <div class="checkbox-group">
-          <label for="remember">
-            <input type="checkbox" id="remember" name="remember" />
-            Remember me
-          </label>
-
-          <label for="humanCheck" class="human-verify">
-            <input type="checkbox" id="humanCheck" name="humanCheck" />
-            Verify you are human
-          </label>
-        </div>
-
-        <button class="btn-login" type="button" onclick="login()">Sign In</button>
-
-        <div class="links" role="navigation" aria-label="Authentication links">
-          <a href="#">Forgot Password?</a> |
-          <a href="#">Sign Up</a>
-        </div>
-
+      <div class="links">
+        <a href="#">Forgot Password?</a> | <a href="#">Sign Up</a>
       </div>
     </div>
-
   </div>
+</div>
 
 <script>
-  function login() {
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const humanCheck = document.getElementById('humanCheck').checked;
+function login() {
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const human = document.getElementById('human').checked;
 
-    if (!username) {
-      alert('Please enter your username.');
-      return;
-    }
-    if (!password) {
-      alert('Please enter your password.');
-      return;
-    }
-    if (!humanCheck) {
-      alert('Please verify you are human.');
-      return;
-    }
-
-    // Demo alert for now
-    alert(`Login attempted with Username: ${username}\n(Demo mode, no backend connected)`);
-    // Here you can implement backend call later
+  if (!username || !password) {
+    alert("Please enter Username and Password.");
+    return;
   }
+  if (!human) {
+    alert("Please verify you are human.");
+    return;
+  }
+  alert(`Login attempt for: ${username} (Demo)`);
+}
 </script>
 
 </body>
