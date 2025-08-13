@@ -572,4 +572,195 @@ body {
   .botactivation-wallets-row {gap:12px;}
   .botactivation-report-main, .botactivation-form-main {min-width:0;}
 }
+--------------Trading Investment Use Fuel --------------------------
+
+.fueltrading-bg {
+  max-width: 1070px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+}
+.fueltrading-breadcrumb {
+  font-size: 14px;
+  color: #6e7285;
+  margin-bottom: 20px;
+}
+.fueltrading-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.fueltrading-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 42px rgba(54,91,181,0.09);
+  padding: 44px 52px 38px 52px;
+}
+.fueltrading-notifybar {
+  background: #f3f7ff;
+  border-radius: 10px;
+  color: #2075c3;
+  padding: 12px 16px;
+  font-size: 14.7px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.fueltrading-notify-title {
+  font-size:15.5px;
+  font-weight:600;
+  color: #2873cd;
+  margin-bottom:2px;
+  letter-spacing:0.3px;
+  display:inline-block;
+}
+.fueltrading-wallets-row {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.fueltrading-wallet {
+  background: #f7fafd;
+  border-radius: 14px;
+  flex: 1 1 218px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 11px rgba(110,159,218,0.10);
+  text-align: left;
+}
+.fueltrading-wallet-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #282e40;
+  margin-bottom: 2px;
+}
+.fueltrading-wallet-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2075c3;
+}
+.fueltrading-main-row {
+  display: flex;
+  gap: 38px;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+.fueltrading-form-panel {
+  flex: 1.22 1 0;
+  min-width: 270px;
+}
+.fueltrading-form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3365;
+  margin-bottom: 15px;
+}
+.fueltrading-form-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.fueltrading-form-row label {
+  font-size:15px;
+  font-weight:500;
+  color:#2075c3;
+  margin-bottom:5px;
+}
+.fueltrading-form-row input,
+.fueltrading-form-row select {
+  font-size:15px;
+  border:1.2px solid #d5e7fa;
+  border-radius:8px;
+  background:#f7fafd;
+  color:#222;
+  padding:10.5px 13px;
+  margin-top:2px;
+  transition:border 0.17s;
+}
+.fueltrading-form-row input:focus,
+.fueltrading-form-row select:focus {
+  border-color:#005bb5;
+  outline:none;
+  background:#e7f3fd;
+}
+.fueltrading-hint {
+  font-size: 12.8px;
+  color: #ad2a2a;
+  margin-top: 2px;
+  font-style: italic;
+}
+.fueltrading-otp-btn {
+  background: #2873cd;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 8px rgba(54,91,181,0.07);
+  transition: background 0.18s;
+}
+.fueltrading-otp-btn:hover {
+  background: #145599;
+}
+.fueltrading-submit-btn {
+  background: #2075c3;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 38px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top:12px;
+  float:right;
+  box-shadow: 0 2px 8px rgba(30,60,130,0.09);
+  transition: background 0.17s;
+}
+.fueltrading-submit-btn:hover {
+  background: #145599;
+}
+.fueltrading-report-panel {
+  flex: 1.14 1 0;
+  min-width: 330px;
+  margin-left:6px;
+}
+.fueltrading-report-title {
+  font-size: 17px;
+  color: #2075c3;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-left: 2px;
+}
+.fueltrading-table {
+  width: 100%;
+  background: #f8fafd;
+  border-radius: 12px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  box-shadow: 0 1px 8px rgba(110,159,218,0.06);
+}
+.fueltrading-table th {
+  background: #f5f8ff;
+  color: #2873cd;
+  font-weight: 600;
+  padding: 8px 8px;
+  border-bottom: 1.5px solid #e1e9f0;
+  font-size: 14px;
+}
+.fueltrading-table td {
+  padding: 8px 8px;
+  color: #284468;
+  background: #fafdff;
+  border-bottom: 1px solid #eef1f7;
+  font-size: 14px;
+}
+.fueltrading-table tr:last-child td {
+  border-bottom:none;
+}
+@media (max-width:1000px) {
+  .fueltrading-bg {padding: 0 2vw;}
+  .fueltrading-card {padding: 20px 2vw;}
+  .fueltrading-main-row {flex-direction:column; gap:22px;}
+  .fueltrading-wallets-row {gap:12px;}
+  .fueltrading-report-panel,.fueltrading-form-panel {min-width:0;}
+}
 
