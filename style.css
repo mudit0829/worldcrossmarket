@@ -1389,3 +1389,108 @@ body {
   .businesshistory-bg {padding: 0 4vw;}
   .businesshistory-card {padding:10px 3vw;}
 }
+---------------Referral Income -----------------------
+.income-bg {
+  max-width: 980px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+}
+.income-breadcrumb {
+  font-size:14px;
+  color: #6e7285;
+  margin-bottom: 22px;
+}
+.income-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.income-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(54,91,181,0.09);
+  padding: 36px 36px 28px 36px;
+}
+.income-card-header {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2868c2;
+  margin-bottom: 20px;
+}
+.income-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.income-filter-date {
+  font-size:14px;
+  border-radius:7px;
+  border:1px solid #d2dbed;
+  padding: 7px 13px;
+  background: #fff;
+}
+.income-filter-btn {
+  background:#2075c3;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:600;
+  padding:8px 28px;
+  cursor:pointer;
+  margin-left:8px;
+  box-shadow:0 1px 5px rgba(54,91,181,0.07);
+}
+.income-table-scroll {
+  width:100%;
+  overflow-x:auto;
+}
+.income-table {
+  width:100%;
+  background:#fbfbfc;
+  border-radius:10px;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:13.5px;
+  margin-bottom:11px;
+  box-shadow:0 1px 8px rgba(110,159,218,0.07);
+}
+.income-table th {
+  background: #f5f7fa;
+  font-weight:600;
+  padding: 10px 7px;
+  border-bottom: 1px solid #e3e9f1;
+  color: #2873cd;
+  font-size:14px;
+}
+.income-table td {
+  padding: 8px 7px;
+  border-bottom: 1px solid #eef1f7;
+  color: #27304c;
+  font-size: 14px;
+}
+.income-table tr:last-child td { border-bottom: none !important; }
+.income-table-pagination {
+  text-align: right;
+  margin: 9px 0;
+}
+.income-page-btn {
+  background: #e7f3ff;
+  color: #005bb5;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.income-page-btn:disabled {
+  background: #f6f7fa;
+  color: #b4b9cb;
+  cursor: default;
+}
+@media (max-width:850px){
+  .income-bg {padding: 0 4vw;}
+  .income-card {padding:10px 3vw;}
+}
