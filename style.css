@@ -1145,3 +1145,88 @@ body {
   .crossinvestment-report-panel, .crossinvestment-form-panel {min-width:0;}
 }
 
+--------------- Direct Team ----------------------------------
+.network-bg {
+  max-width: 1200px;
+  margin: 38px auto 0 auto;
+  padding: 0 18px;
+}
+.network-breadcrumb {
+  font-size: 14px;
+  color: #6e7285;
+  margin-bottom: 22px;
+}
+.network-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.network-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  padding: 32px 42px 28px 42px;
+}
+.network-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2868c2;
+  margin-bottom: 20px;
+}
+.network-table-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 14.4px;
+  color: #3c4a67;
+}
+.network-table {
+  width: 100%;
+  background: #fbfbfc;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13.2px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 8px rgba(110,159,218,0.07);
+}
+.network-table th {
+  background: #f5f7fa;
+  font-weight: 600;
+  padding: 10px 7px;
+  border-bottom: 1px solid #e3e9f1;
+  color: #2873cd;
+  font-size: 13px;
+}
+.network-table td {
+  padding: 8px 7px;
+  border-bottom: 1px solid #eef1f7;
+  color: #27304c;
+  font-size: 13px;
+}
+.network-table tr:last-child td {
+  border-bottom: none !important;
+}
+.network-table-pagination {
+  text-align: right;
+}
+.netpage-btn {
+  background: #e7f3ff;
+  color: #005bb5;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.netpage-btn:disabled {
+  background: #f6f7fa;
+  color: #b4b9cb;
+  cursor: default;
+}
+@media (max-width:850px){
+  .network-bg {padding: 0 4vw;}
+  .network-card {padding:10px 3vw;}
+}
