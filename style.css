@@ -1285,3 +1285,107 @@ body {
   text-align:right;
   margin-top:8px;
 }
+--------------- Business History -------------------------------
+
+.businesshistory-bg {
+  max-width: 980px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+}
+.businesshistory-breadcrumb {
+  font-size:14px;
+  color: #6e7285;
+  margin-bottom: 22px;
+}
+.businesshistory-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.businesshistory-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(54,91,181,0.09);
+  padding: 36px 40px 28px 40px;
+}
+.businesshistory-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #3c4a67;
+}
+.businesshistory-type, .businesshistory-date, .businesshistory-filter-btn,
+.businesshistory-search {
+  font-size:14px;
+  border-radius:7px;
+  border:1px solid #d2dbed;
+  padding: 7px 13px;
+  background: #fff;
+}
+.businesshistory-filter-btn {
+  background:#2075c3;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  border:none;
+  margin-right:8px;
+  box-shadow:0 1px 5px rgba(54,91,181,0.08);
+}
+.businesshistory-search {
+  margin-left:auto;
+  width:168px;
+}
+.businesshistory-table-scroll {
+  width:100%;
+  overflow-x:auto;
+}
+.businesshistory-table {
+  width:100%;
+  background:#fbfbfc;
+  border-radius:10px;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:14px;
+  margin-bottom:11px;
+  box-shadow:0 1px 8px rgba(110,159,218,0.07);
+}
+.businesshistory-table th {
+  background: #f5f7fa;
+  font-weight:600;
+  padding: 10px 7px;
+  border-bottom: 1px solid #e3e9f1;
+  color: #2873cd;
+  font-size:14px;
+}
+.businesshistory-table td {
+  padding: 8px 7px;
+  border-bottom: 1px solid #eef1f7;
+  color: #27304c;
+  font-size: 14px;
+}
+.businesshistory-table tr:last-child td { border-bottom: none !important; }
+.businesshistory-pagination {
+  text-align: right;
+  margin: 9px 0;
+}
+.bushistpage-btn {
+  background: #e7f3ff;
+  color: #005bb5;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.bushistpage-btn:disabled {
+  background: #f6f7fa;
+  color: #b4b9cb;
+  cursor: default;
+}
+@media (max-width:850px){
+  .businesshistory-bg {padding: 0 4vw;}
+  .businesshistory-card {padding:10px 3vw;}
+}
