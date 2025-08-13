@@ -396,4 +396,180 @@ body {
   .arbid-card {padding: 22px 6px;}
   .arbid-bg {max-width:96vw;}
 }
+--------------bot activation -----------------
+
+.botactivation-bg {
+  max-width: 1020px;
+  margin: 38px auto 0 auto;
+  padding: 0 18px;
+}
+.botactivation-breadcrumb {
+  font-size: 14px;
+  color: #6e7285;
+  margin-bottom: 22px;
+}
+.botactivation-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.botactivation-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(54,91,181,0.09);
+  padding: 46px 54px 38px 54px;
+}
+.botactivation-header-img {
+  text-align: right;
+  margin-bottom: 15px;
+}
+.botactivation-notify {
+  background: #faf4ff;
+  border-radius: 10px;
+  padding: 13px 18px;
+  color: #7f50c9;
+  font-size: 15.5px;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+.botactivation-notify-label {
+  font-size:16px;
+  font-weight:600;
+  color:#9b56c6;
+  letter-spacing:.5px;
+  display:inline-block;
+  margin-bottom:5px;
+}
+.botactivation-wallets-row {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.botactivation-wallet {
+  background: #f7fafd;
+  border-radius: 16px;
+  flex: 1 1 220px;
+  padding: 20px 28px;
+  box-shadow: 0 2px 12px rgba(110,159,218,0.13);
+  text-align: left;
+}
+.botactivation-wallet-title {
+  font-size: 16px;
+  color: #282e40;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.botactivation-wallet-value {
+  font-size: 27px;
+  font-weight: 800;
+  color: #2075c3;
+}
+.botactivation-form-row {
+  display: flex;
+  gap: 34px;
+  align-items: start;
+  margin-top: 18px;
+}
+.botactivation-form-main {
+  flex: 1.2 1 0;
+  min-width: 290px;
+}
+.botactivation-form-title {
+  font-size: 18px;
+  color: #2c3365;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.botactivation-form-field {
+  margin-bottom: 18px;
+}
+.botactivation-form-field label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #3278cb;
+  margin-bottom: 5px;
+  display: block;
+}
+.botactivation-form-field input,
+.botactivation-form-field select {
+  width: 100%;
+  padding: 11px 13px;
+  font-size: 15px;
+  border: 1.4px solid #cfe5fa;
+  border-radius: 8px;
+  background: #f7fafd;
+  color: #222;
+  margin-top: 3px;
+}
+.botactivation-otp-btn {
+  background: #a650ed;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 8px rgba(54,91,181,0.08);
+  transition: background 0.18s;
+}
+.botactivation-otp-btn:hover {
+  background: #803ab6;
+}
+.botactivation-submit-btn {
+  background: #2075c3;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 42px;
+  font-size: 16.2px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  float: right;
+  box-shadow: 0 2px 8px rgba(30,60,130,0.10);
+  transition: background 0.17s;
+}
+.botactivation-submit-btn:hover {
+  background: #165a96;
+}
+.botactivation-report-main {
+  flex: 1.1 1 0;
+  min-width: 340px;
+  margin-left:10px;
+}
+.botactivation-report-title {
+  font-size: 17px;
+  color: #2075c3;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-left: 2px;
+}
+.botactivation-report-table {
+  width: 100%;
+  background: #f8fafd;
+  border-radius: 12px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+  box-shadow: 0 1px 8px rgba(110,159,218,0.06);
+}
+.botactivation-report-table th {
+  background: #f5f8ff;
+  color: #2873cd;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-bottom: 1.5px solid #e1e9f0;
+}
+.botactivation-report-table td {
+  padding: 8px 10px;
+  color: #284468;
+  background: #fafdff;
+}
+@media (max-width:900px) {
+  .botactivation-bg {padding: 0 2vw;}
+  .botactivation-card {padding: 22px 2vw;}
+  .botactivation-form-row {flex-direction:column; gap:28px;}
+  .botactivation-wallets-row {gap:12px;}
+  .botactivation-report-main, .botactivation-form-main {min-width:0;}
+}
 
