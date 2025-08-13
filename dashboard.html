@@ -1,348 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WorldCrossMarket.ai - Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f4f6fa;
-      color: #22315a;
-    }
-    .dashboard-wrapper {
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-    }
-    /* Sidebar */
-    .sidebar {
-      width: 230px;
-      background: #fff;
-      border-right: 1px solid #e3e8ee;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.03);
-      display: flex;
-      flex-direction: column;
-    }
-    .sidebar-logo {
-      margin: 0 auto 24px auto;
-      width: 60px;
-      display: block;
-      margin-top: 24px;
-    }
-    .sidebar-menu {
-      list-style: none;
-      padding: 0 0 0 26px;
-      margin: 0;
-      flex: 1;
-    }
-    .sidebar-menu li {
-      margin-bottom: 10px;
-      font-size: 12px;
-    }
-    .sidebar-menu li a {
-      color: #22315a;
-      text-decoration: none;
-      font-weight: 400;
-      padding: 5px 8px;
-      border-radius: 6px;
-      display: block;
-      transition: background 0.2s;
-    }
-    .sidebar-menu li a:hover {
-      background: #f5f7fa;
-      color: #005bb5;
-    }
-    /* Main content */
-    .main-content {
-      flex: 1;
-      padding: 20px 28px;
-      overflow-y: auto;
-    }
-    /* Referral Link - top right */
-    .referral-container {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 18px;
-    }
-    .referral-link-box {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
-      padding: 8px 12px;
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      width: 390px;
-    }
-    .referral-link-label {
-      font-weight: 600;
-      margin-right: 8px;
-    }
-    .referral-link-input {
-      background: #f4f7fb;
-      border: none;
-      font-size: 13px;
-      padding: 5px 8px;
-      border-radius: 6px;
-      flex: 1;
-    }
-    .referral-link-copy {
-      background-color: #3c83f7;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 5px 10px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    /* Wallets Grid */
-    .wallets-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .wallet-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
-      padding: 14px;
-      height: 88px;
-    }
-    .wallet-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .wallet-amount {
-      font-size: 24px;
-      font-weight: 700;
-      color: #005bb5;
-    }
-    /* Summary banners */
-    .summary-row {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-    .income-banner, .withdraw-banner {
-      flex: 1;
-      border-radius: 12px;
-      height: 66px;
-      font-size: 22px;
-      font-weight: 700;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.03);
-    }
-    .income-banner {
-      background: #e7f3ff;
-      color: #2288dd;
-    }
-    .withdraw-banner {
-      background: #fae2f4;
-      color: #b74399;
-    }
-    /* Lower cards row */
-    .cards-row {
-      display: flex;
-      gap: 16px;
-    }
-    .profile-card, .business-details, .income-details {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
-      padding: 22px;
-      font-size: 13px;
-    }
-    .profile-card {
-      max-width: 340px;
-      flex: 1;
-    }
-    .profile-row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    .profile-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 14px;
-      border: 2px solid #eef2fa;
-    }
-    .profile-info {
-      font-size: 16px;
-      font-weight: 600;
-    }
-    .profile-id {
-      font-size: 13px;
-      color: #005bb5;
-    }
-    .profile-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .profile-table td {
-      padding: 3px 0;
-    }
-    .close-report-btn {
-      margin-top: 10px;
-      background: #2346ad;
-      color: #fff;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    .business-details, .income-details {
-      flex: 1;
-      max-width: 340px;
-    }
-    .card-header {
-      font-size: 15px;
-      font-weight: 700;
-      color: #3c83f7;
-      margin-bottom: 8px;
-    }
-    .detail-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .detail-table td {
-      padding: 3px 0;
-      font-size: 13px;
-    }
-    /* Responsive */
-    @media(max-width: 1100px) {
-      .wallets-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .cards-row {
-        flex-direction: column;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<title>WorldCrossMarket.ai - Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fa;
+  color: #22315a;
+}
+/* Sidebar */
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 230px;
+  background: #fff;
+  border-right: 1px solid #e3e8ee;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  padding-top: 22px;
+  min-width: 230px;
+}
+.sidebar-logo {
+  width: 58px;
+  display: block;
+  margin: 0 auto 18px auto;
+}
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-block {
+  margin-bottom: 8px;
+}
+.menu-heading {
+  font-size: 15px;
+  font-weight: 600;
+  color: #22315a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 22px 8px 18px;
+  border-radius: 6px;
+  transition: background 0.1s;
+  position: relative;
+}
+.menu-heading.active, .menu-heading:hover {
+  background: #eef6ff;
+  color: #005bb5;
+}
+.sidebar-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.arrow {
+  margin-left: auto;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+.arrow.open {
+  transform: rotate(180deg);
+}
+.submenu {
+  display: none;
+  padding-left: 34px;
+}
+.menu-block.open .submenu {
+  display: block;
+}
+.submenu li {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: #22315a;
+  padding: 6px 0 6px 2px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.15s;
+}
+.submenu li.active, .submenu li:hover {
+  background: #f5f7fa;
+  color: #005bb5;
+}
+.submenu-icon {
+  width: 19px;
+  height: 19px;
+  margin-right: 9px;
+}
+.main-content {
+  flex: 1;
+  padding: 28px 32px 22px 38px;
+  min-width: 0;
+}
+
+/* Responsive Sidebar */
+@media (max-width:1000px){
+  .dashboard-wrapper { flex-direction: column;}
+  .sidebar { width: 100vw; min-width: 0; flex-direction: row; border-right:none; border-bottom: 1px solid #e3e8ee; align-items: center; padding:0;}
+  .sidebar-menu { display: flex; flex-direction: row; }
+  .menu-block { margin-bottom:0; margin-right:22px;}
+  .main-content{padding:18px 9px;}
+}
+
+/* --- Dashboard UI --- */
+.referral-container {
+  display: flex; justify-content: flex-end; margin-bottom: 18px;
+}
+.referral-link-box {
+  background: #fff; border-radius: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+  padding: 8px 12px; display: flex; align-items: center; font-size: 14px; width: 390px;
+}
+.referral-link-label { font-weight: 600; margin-right: 8px; }
+.referral-link-input { background: #f4f7fb; border: none; font-size: 13px; padding: 5px 8px; border-radius: 6px; flex: 1;}
+.referral-link-copy { background-color: #3c83f7; color: #fff; border: none; border-radius: 6px; padding: 5px 10px; font-size: 12px; cursor: pointer;}
+.wallets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;}
+.wallet-card { background: #fff; border-radius: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.03); padding: 14px; height: 88px;}
+.wallet-title { font-size: 15px; font-weight: 600; margin-bottom: 6px;}
+.wallet-amount { font-size: 24px; font-weight: 700; color: #005bb5;}
+.summary-row { display: flex; gap: 16px; margin-bottom: 20px;}
+.income-banner, .withdraw-banner { flex: 1; border-radius: 12px; height: 66px; font-size: 22px; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 1px 6px rgba(0,0,0,0.03);}
+.income-banner { background: #e7f3ff; color: #2288dd;}
+.withdraw-banner{ background: #fae2f4; color: #b74399;}
+.cards-row { display: flex; gap: 16px;}
+.profile-card, .business-details, .income-details { background: #fff; border-radius: 12px; box-shadow: 0 1px 8px rgba(0,0,0,0.03); padding: 22px; font-size: 13px;}
+.profile-card, .business-details, .income-details { max-width: 340px; flex: 1;}
+.profile-row { display: flex; align-items: center; margin-bottom: 12px;}
+.profile-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; margin-right: 14px; border: 2px solid #eef2fa;}
+.profile-info { font-size: 16px; font-weight: 600;}
+.profile-id { font-size: 13px; color: #005bb5;}
+.profile-table { width: 100%; border-collapse: collapse;}
+.profile-table td { padding: 3px 0;}
+.close-report-btn { margin-top: 10px; background: #2346ad; color: #fff; border: none; padding: 6px 12px; border-radius: 5px; font-size: 12px; cursor: pointer;}
+.business-details, .income-details { flex: 1;}
+.card-header { font-size: 15px; font-weight: 700; color: #3c83f7; margin-bottom: 8px;}
+.detail-table { width: 100%; border-collapse: collapse;}
+.detail-table td { padding: 3px 0; font-size: 13px;}
+/* DASHBOARD END */
+
+/* --- Settings Pages --- */
+.dashboard-breadcrumb {font-size:14px;color:#666;margin-bottom:20px;}
+.profile-card-settings { background:#fff; border-radius:14px; box-shadow:0 2px 14px rgba(0,0,0,0.04); max-width:440px; margin:0 auto; padding:38px 32px;}
+.profile-logo{ width:85px;display:block; margin:0 auto 18px;}
+.profile-title{ font-size:24px;font-weight:600; color:#005bb5; text-align:center;margin-bottom:22px;}
+.profile-row{margin-bottom:15px;display:flex;flex-direction:column;}
+.profile-row label{font-size:15px; font-weight:500;color:#22315a;margin-bottom:5px;}
+.profile-row input{padding:12px 14px;border:1px solid #d3e3fa; border-radius:8px; font-size:15px;}
+.update-btn{margin-top:18px;width:100%;padding:12px 0;background:#005bb5;color:#fff; border:none; border-radius:8px; font-size:17px; font-weight:600; cursor:pointer;}
+.update-btn:hover{background:#004494;}
+.wallet-card-settings { background:#fff; border-radius:14px; box-shadow:0 2px 14px rgba(0,0,0,0.04); max-width:640px; margin:0 auto; padding:36px 32px;}
+.wallet-table{margin-top:30px; width:100%; border-collapse:collapse;}
+.wallet-table th, .wallet-table td{font-size:14px;border-bottom:1px solid #eef2fa;padding:10px 6px;}
+.wallet-table th{background:#f5f7fa;font-weight:600;}
+.otp-btn{margin-left:8px;padding:10px 17px;background:#3c83f7;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;}
+.otp-btn:hover{background:#2867c5;}
+.arbitrage-card-settings{background:#fff;border-radius:14px;box-shadow:0 2px 14px rgba(0,0,0,0.04);max-width:400px;margin:48px auto 0 auto;padding:33px 20px;text-align:center;}
+.arbitrage-avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:16px;}
+.arbitrage-label{font-size:18px;font-weight:600;color:#005bb5;margin-bottom:9px;}
+.verified{margin-left:7px;color:#24d05a;font-size:18px;}
+.arbitrage-id{font-size:17px;color:#22315a;font-weight:500;}
+</style>
 </head>
 <body>
-
 <div class="dashboard-wrapper">
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <img src="asset/logo.png" class="sidebar-logo" alt="Logo" />
+    <img src="assets/your-logo.png" class="sidebar-logo" alt="Logo" />
     <ul class="sidebar-menu">
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Settings</a></li>
-      <li><a href="#">Bot Activation</a></li>
-      <li><a href="#">Trading Investment (Fuel)</a></li>
-      <li><a href="#">Trading Investment (Capital)</a></li>
-      <li><a href="#">Angel Investment</a></li>
-      <li><a href="#">Cross Investment</a></li>
-      <li><a href="#">Network</a></li>
-      <li><a href="#">Incomes</a></li>
-      <li><a href="#">Deposit</a></li>
-      <li><a href="#">Transfer</a></li>
-      <li><a href="#">Swap</a></li>
-      <li><a href="#">Financial</a></li>
-      <li><a href="#">Rank & Reward</a></li>
-      <li><a href="#">Support</a></li>
-      <li><a href="#">Presentation</a></li>
-      <li><a href="#">Logout</a></li>
+      <!-- DASHBOARD -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="openMenu(this, 'dashboard')">
+          <img src="assets/dashboard-icon.svg" class="sidebar-icon" />Dashboard
+        </div>
+      </li>
+      <!-- SETTINGS Dropdown -->
+      <li class="menu-block" id="menu-settings">
+        <div class="menu-heading" onclick="openMenu(this, 'settings')">
+          <img src="assets/settings-icon.svg" class="sidebar-icon" />Settings
+          <span class="arrow">&#9662;</span>
+        </div>
+        <ul class="submenu">
+          <li onclick="showPage('profile', this)"><img src="assets/profile-icon.svg" class="submenu-icon" />Profile</li>
+          <li onclick="showPage('wallet', this)"><img src="assets/wallet-icon.svg" class="submenu-icon" />Wallet Address</li>
+          <li onclick="showPage('arbitrage', this)"><img src="assets/arbitrage-icon.svg" class="submenu-icon" />Arbitrage ID</li>
+        </ul>
+      </li>
+      <!-- Add more menu blocks as per your screenshots... -->
+      <!-- Example for Deposit (other blocks) -->
+      <!--
+      <li class="menu-block"><div class="menu-heading" onclick="openMenu(this, 'deposit')">
+        <img src="assets/deposit-icon.svg" class="sidebar-icon" />Deposit
+      </div></li>
+      -->
     </ul>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main Content - PAGES -->
   <section class="main-content">
-
-    <!-- Referral Link -->
-    <div class="referral-container">
-      <div class="referral-link-box">
-        <span class="referral-link-label">Referral Link</span>
-        <input class="referral-link-input" type="text" readonly value="http://worldcrossmarket.ai/auth/signup?referral=XM11622579" id="ref-link" />
-        <button class="referral-link-copy" onclick="copyReferralLink()">Copy</button>
-      </div>
-    </div>
-
-    <!-- Wallets -->
-    <div class="wallets-grid">
-      <div class="wallet-card"><div class="wallet-title">Income Wallet</div><div class="wallet-amount">$0</div></div>
-      <div class="wallet-card"><div class="wallet-title">Angel Wallet</div><div class="wallet-amount">$0</div></div>
-      <div class="wallet-card"><div class="wallet-title">Fuel Income Wallet</div><div class="wallet-amount">$0</div></div>
-      <div class="wallet-card"><div class="wallet-title">Fuel Wallet</div><div class="wallet-amount">$0</div></div>
-      <div class="wallet-card"><div class="wallet-title">Topup Wallet</div><div class="wallet-amount">$0</div></div>
-      <div class="wallet-card"><div class="wallet-title">Package Wallet</div><div class="wallet-amount">$0</div></div>
-      <div class="wallet-card"><div class="wallet-title">Capital Wallet</div><div class="wallet-amount">$0</div></div>
-      <div class="wallet-card"><div class="wallet-title">Cross Wallet</div><div class="wallet-amount">$0</div></div>
-    </div>
-
-    <!-- Banners -->
-    <div class="summary-row">
-      <div class="income-banner">Total Income<br>$0</div>
-      <div class="withdraw-banner">Total Withdraw<br>$0</div>
-    </div>
-
-    <!-- Lower 3 Cards -->
-    <div class="cards-row">
-      <div class="profile-card">
-        <div class="profile-row">
-          <img src="avatar.jpg" alt="Avatar" class="profile-avatar" />
-          <div>
-            <div class="profile-info">Mudit Tiwari</div>
-            <div class="profile-id">XM11622579</div>
-          </div>
+    <!-- DASHBOARD PAGE -->
+    <div id="page-dashboard">
+      <div class="referral-container">
+        <div class="referral-link-box">
+          <span class="referral-link-label">Referral Link</span>
+          <input class="referral-link-input" type="text" readonly value="http://worldcrossmarket.ai/auth/signup?referral=XM11622579" id="ref-link" />
+          <button class="referral-link-copy" onclick="copyReferralLink()">Copy</button>
         </div>
-        <table class="profile-table">
-          <tr><td>Referral ID</td><td>XM98053</td></tr>
-          <tr><td>Bot License</td><td>Inactive</td></tr>
-          <tr><td>Trading ARB Amount</td><td>0.0000</td></tr>
-          <tr><td>Angel ARB Amount</td><td>0.0000</td></tr>
-          <tr><td>Cross ARB Amount</td><td>0</td></tr>
-          <tr><td>Rank</td><td>NA</td></tr>
-          <tr><td>Date of Joining</td><td>7/14/2025 6:25:29 PM</td></tr>
-          <tr><td>Date of Activation</td><td>-</td></tr>
-        </table>
-        <button class="close-report-btn">Click to View Closing Report</button>
       </div>
-
-      <div class="business-details">
-        <div class="card-header">Business Details</div>
-        <table class="detail-table">
-          <tr><td>Direct Bot</td><td>0</td></tr>
-          <tr><td>Total Bot</td><td>0</td></tr>
-          <tr><td>Team Business (Trading/Angel)</td><td>0/0</td></tr>
-          <tr><td>Total Team (Left/Right)</td><td>0/0</td></tr>
-          <tr><td>Strong/Weaker Leg Bot</td><td>0/0</td></tr>
-          <tr><td>Total Bot (Left/Right)</td><td>0/0</td></tr>
-          <tr><td>Bot Carry Forward (Left/Right)</td><td>0/0</td></tr>
-          <tr><td>Current Trading Business L/R</td><td>0/0</td></tr>
-          <tr><td>Total Trading Business L/R</td><td>0/0</td></tr>
-          <tr><td>Total Angel Business L/R</td><td>0/0</td></tr>
-        </table>
+      <div class="wallets-grid">
+        <div class="wallet-card"><div class="wallet-title">Income Wallet</div><div class="wallet-amount">$0</div></div>
+        <div class="wallet-card"><div class="wallet-title">Angel Wallet</div><div class="wallet-amount">$0</div></div>
+        <div class="wallet-card"><div class="wallet-title">Fuel Income Wallet</div><div class="wallet-amount">$0</div></div>
+        <div class="wallet-card"><div class="wallet-title">Fuel Wallet</div><div class="wallet-amount">$0</div></div>
+        <div class="wallet-card"><div class="wallet-title">Topup Wallet</div><div class="wallet-amount">$0</div></div>
+        <div class="wallet-card"><div class="wallet-title">Package Wallet</div><div class="wallet-amount">$0</div></div>
+        <div class="wallet-card"><div class="wallet-title">Capital Wallet</div><div class="wallet-amount">$0</div></div>
+        <div class="wallet-card"><div class="wallet-title">Cross Wallet</div><div class="wallet-amount">$0</div></div>
       </div>
+      <div class="summary-row">
+        <div class="income-banner">Total Income<br>$0</div>
+        <div class="withdraw-banner">Total Withdraw<br>$0</div>
+      </div>
+      <div class="cards-row">
+        <div class="profile-card">
+          <div class="profile-row">
+            <img src="assets/avatar.jpg" alt="Avatar" class="profile-avatar" />
+            <div>
+              <div class="profile-info">Mudit Tiwari</div>
+              <div class="profile-id">XM11622579</div>
+            </div>
+          </div>
+          <table class="profile-table">
+            <tr><td>Referral ID</td><td>XM98053</td></tr>
+            <tr><td>Bot License</td><td>Inactive</td></tr>
+            <tr><td>Trading ARB Amount</td><td>0.0000</td></tr>
+            <tr><td>Angel ARB Amount</td><td>0.0000</td></tr>
+            <tr><td>Cross ARB Amount</td><td>0</td></tr>
+            <tr><td>Rank</td><td>NA</td></tr>
+            <tr><td>Date of Joining</td><td>7/14/2025 6:25:29 PM</td></tr>
+            <tr><td>Date of Activation</td><td>-</td></tr>
+          </table>
+          <button class="close-report-btn">Click to View Closing Report</button>
+        </div>
+        <div class="business-details">
+          <div class="card-header">Business Details</div>
+          <table class="detail-table">
+            <tr><td>Direct Bot</td><td>0</td></tr>
+            <tr><td>Total Bot</td><td>0</td></tr>
+            <tr><td>Team Business (Trading/Angel)</td><td>0/0</td></tr>
+            <tr><td>Total Team (Left/Right)</td><td>0/0</td></tr>
+            <tr><td>Strong/Weaker Leg Bot</td><td>0/0</td></tr>
+            <tr><td>Total Bot (Left/Right)</td><td>0/0</td></tr>
+            <tr><td>Bot Carry Forward (Left/Right)</td><td>0/0</td></tr>
+            <tr><td>Current Trading Business L/R</td><td>0/0</td></tr>
+            <tr><td>Total Trading Business L/R</td><td>0/0</td></tr>
+            <tr><td>Total Angel Business L/R</td><td>0/0</td></tr>
+          </table>
+        </div>
+        <div class="income-details">
+          <div class="card-header">Income Details</div>
+          <table class="detail-table">
+            <tr><td>Referral Income</td><td>0</td></tr>
+            <tr><td>Generation Income</td><td>0</td></tr>
+            <tr><td>Trading Profit Income</td><td>0</td></tr>
+            <tr><td>Leadership Pool Income</td><td>0</td></tr>
+            <tr><td>Reward Income</td><td>0</td></tr>
+            <tr><td>IBI Income</td><td>0</td></tr>
+            <tr><td>Rapid Rise Bonus</td><td>0</td></tr>
+            <tr><td>Matching Income</td><td>0</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
 
-      <div class="income-details">
-        <div class="card-header">Income Details</div>
-        <table class="detail-table">
-          <tr><td>Referral Income</td><td>0</td></tr>
-          <tr><td>Generation Income</td><td>0</td></tr>
-          <tr><td>Trading Profit Income</td><td>0</td></tr>
-          <tr><td>Leadership Pool Income</td><td>0</td></tr>
-          <tr><td>Reward Income</td><td>0</td></tr>
-          <tr><td>IBI Income</td><td>0</td></tr>
-          <tr><td>Rapid Rise Bonus</td><td>0</td></tr>
-          <tr><td>Matching Income</td><td>0</td></tr>
+    <!-- PROFILE SETTINGS PAGE -->
+    <div id="page-profile" style="display:none;">
+      <div class="dashboard-breadcrumb">Home / Setting / <span>Profile</span></div>
+      <div class="profile-card-settings">
+        <img src="assets/your-logo.png" class="profile-logo" alt="Logo" />
+        <div class="profile-title">Profile</div>
+        <form>
+          <div class="profile-row">
+            <label>Name</label>
+            <input type="text" value="Mudit Tiwari" />
+          </div>
+          <div class="profile-row">
+            <label>Email</label>
+            <input type="email" value="mudit8@gmail.com" />
+          </div>
+          <div class="profile-row">
+            <label>Mobile</label>
+            <input type="text" value="8448576369" />
+          </div>
+          <div class="profile-row">
+            <label>Country</label>
+            <input type="text" value="India" />
+          </div>
+          <div class="profile-row">
+            <label>Transaction Password</label>
+            <input type="password" value="******" />
+          </div>
+          <button class="update-btn" type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- WALLET ADDRESS PAGE -->
+    <div id="page-wallet" style="display:none;">
+      <div class="dashboard-breadcrumb">Settings / <span>Wallet Address</span></div>
+      <div class="wallet-card-settings">
+        <div class="profile-title">Add New USDT.BEP20 Address to Receive Profits</div>
+        <form>
+          <div class="profile-row">
+            <label>Select Wallet</label>
+            <select>
+              <option>USDT.BEP20</option>
+              <!-- Add more wallet types if needed -->
+            </select>
+          </div>
+          <div class="profile-row">
+            <label>Address</label>
+            <input type="text" placeholder="Enter Wallet Address" />
+          </div>
+          <div class="profile-row">
+            <label>Transaction Password</label>
+            <input type="password" placeholder="******" />
+          </div>
+          <div class="profile-row" style="display:flex;align-items:center;">
+            <label style="flex:1;">One Time Password</label>
+            <input type="text" placeholder="Enter OTP" style="width:60%;margin-right:12px;" />
+            <button type="button" class="otp-btn">Send OTP</button>
+          </div>
+          <button class="update-btn" type="submit">Submit</button>
+        </form>
+        <table class="wallet-table">
+          <thead>
+            <tr><th>#</th><th>Wallet</th><th>Address</th><th>Created At</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>USDT.BEP20</td><td>0x....</td><td>2025-08-13</td><td>Active</td></tr>
+          </tbody>
         </table>
       </div>
     </div>
 
+    <!-- ARBITRAGE ID PAGE -->
+    <div id="page-arbitrage" style="display:none;">
+      <div class="dashboard-breadcrumb">Home / <span>Arbitrage ID</span></div>
+      <div class="arbitrage-card-settings">
+        <img src="assets/avatar.jpg" class="arbitrage-avatar" alt="Avatar" />
+        <div class="arbitrage-label">
+          Arbitrage ID <span class="verified">&#10004;</span>
+        </div>
+        <div class="arbitrage-id">CPS7963939</div>
+      </div>
+    </div>
   </section>
 </div>
 
@@ -351,10 +372,55 @@ function copyReferralLink() {
   const refInput = document.getElementById("ref-link");
   refInput.select();
   refInput.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(refInput.value);
-  alert("Referral link copied!");
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(refInput.value);
+    alert("Referral link copied!");
+  } else {
+    document.execCommand('copy');
+    alert("Referral link copied!");
+  }
 }
-</script>
 
+// Sidebar: Only one dropdown open at once
+function openMenu(el, id) {
+  // Collapse all dropdowns
+  document.querySelectorAll('.menu-heading').forEach(h=>{
+    h.classList.remove('active');
+    let block = h.parentNode;
+    if(block.classList.contains('menu-block')) block.classList.remove('open');
+    let arr = h.querySelector('.arrow');
+    if(arr) arr.classList.remove('open');
+  });
+  // Remove active from all submenus
+  document.querySelectorAll('.submenu li').forEach(l=>l.classList.remove('active'));
+  // For Dashboard and other pages: show content
+  if (id === 'dashboard') {
+    showPage('dashboard');
+    el.classList.add('active');
+    return;
+  }
+  // Open selected dropdown
+  el.classList.add('active');
+  let block = el.parentNode;
+  if(block.classList.contains('menu-block')) block.classList.add('open');
+  let arr = el.querySelector('.arrow');
+  if(arr) arr.classList.add('open');
+  // For Settings: show first subpage by default
+  if(id==='settings') showPage('profile');
+}
+
+// Page Swap Logic
+function showPage(pageId, subMenuEl) {
+  // Hide all pages
+  document.querySelectorAll('.main-content>div').forEach(div=>div.style.display='none');
+  document.getElementById('page-' + pageId).style.display='block';
+  // Highlight sidebar submenu
+  document.querySelectorAll('.submenu li').forEach(l=>l.classList.remove('active'));
+  if(subMenuEl) subMenuEl.classList.add('active');
+}
+
+// Initial page load
+openMenu(document.querySelector('.menu-heading'), 'dashboard');
+</script>
 </body>
 </html>
