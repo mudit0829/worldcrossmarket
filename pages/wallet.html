@@ -1,0 +1,64 @@
+<div class="walletaddress-container">
+  <!-- Breadcrumb -->
+  <div class="wallet-breadcrumb">
+    Settings / <span>Wallet Address</span>
+  </div>
+
+  <!-- Card -->
+  <div class="wallet-card-outer">
+    <!-- Gentle Reminder -->
+    <div class="wallet-reminder">
+      <img src="assets/info-icon.svg" class="wallet-reminder-icon" alt="Info">
+      <span class="wallet-reminder-text">
+        Kindly update your USDT.BEP20 Wallet Address to get withdrawals into your account. Please connect with your up-line for further assistance regarding the same.
+      </span>
+    </div>
+    <!-- Form Heading -->
+    <div class="wallet-card-header">
+      Add New USDT.BEP20 Address to Receive Profits
+    </div>
+    <form autocomplete="off">
+      <div class="wallet-form-row">
+        <label for="wallet-type">Select Wallet</label>
+        <select id="wallet-type">
+          <option>USDT.BEP20</option>
+        </select>
+      </div>
+      <div class="wallet-form-row">
+        <label for="wallet-address-input">Address</label>
+        <input type="text" id="wallet-address-input" placeholder="Enter Wallet Address"/>
+      </div>
+      <div class="wallet-form-row">
+        <label for="wallet-txn-password">Transaction Password</label>
+        <input type="password" id="wallet-txn-password" placeholder="******"/>
+      </div>
+      <div class="wallet-form-row otp-row">
+        <label for="wallet-otp">One Time Password</label>
+        <input type="text" id="wallet-otp" placeholder="Enter One Time Password"/>
+        <button type="button" class="wallet-otp-btn">Send OTP</button>
+      </div>
+      <button type="submit" class="wallet-submit-btn">Submit</button>
+    </form>
+    <!-- Table -->
+    <table class="wallet-table">
+      <thead>
+        <tr>
+          <th style="width:45px">#</th>
+          <th style="width:120px">Wallet</th>
+          <th>Address</th>
+          <th style="width:110px">Created At</th>
+          <th style="width:85px">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>USDT.BEP20</td>
+          <td>0x607d3...f19e</td>
+          <td>2025-08-13</td>
+          <td>Active</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
