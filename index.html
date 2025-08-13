@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WorldCrossMarket.ai</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body {margin:0; font-family:'Poppins',sans-serif; background:#f4f6fa; color:#22315a;}
+.dashboard-wrapper {display:flex; min-height:100vh;}
+.sidebar {width:230px; background:#fff; border-right:1px solid #e3e8ee; box-shadow:2px 0 8px rgba(0,0,0,0.03); padding-top:20px;}
+.sidebar-logo {width:58px; display:block; margin:0 auto 18px;}
+.sidebar-menu {list-style:none; margin:0; padding:0;}
+.menu-block {margin-bottom:6px;}
+.menu-heading {font-size:15px; font-weight:600; color:#22315a; cursor:pointer; display:flex; align-items:center; padding:8px 16px; border-radius:6px;}
+.menu-heading.active, .menu-heading:hover {background:#eef6ff; color:#005bb5;}
+.sidebar-icon {width:22px; height:22px; margin-right:10px;}
+.arrow {margin-left:auto; font-size:13px; transition:transform 0.2s;}
+.arrow.open {transform: rotate(180deg);}
+.submenu {display:none; padding-left:36px;}
+.menu-block.open .submenu {display:block;}
+.submenu li {font-size:14px; color:#22315a; padding:6px 0; display:flex; align-items:center; cursor:pointer; border-radius:5px;}
+.submenu li.active, .submenu li:hover {background:#f5f7fa; color:#005bb5;}
+.submenu-icon {width:17px; height:17px; margin-right:8px;}
+.main-content {flex:1; padding:28px;}
+.page-section {display:none;}
+.page-section.active {display:block;}
+@media (max-width:1000px){
+  .dashboard-wrapper {flex-direction:column;}
+  .sidebar {width:100vw; min-width:0; flex-direction:row; border-right:none; border-bottom:1px solid #e3e8ee; align-items:center; padding:0;}
+  .sidebar-menu {display:flex; flex-direction:row;}
+  .menu-block {margin-bottom:0; margin-right:18px;}
+  .main-content{padding:18px 9px;}
+}
+</style>
+</head>
+<body>
+<div class="dashboard-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <img src="assets/your-logo.png" class="sidebar-logo" alt="Logo">
+    <ul class="sidebar-menu">
+
+      <!-- No Dropdown -->
+      <li class="menu-block">
+        <div class="menu-heading active" onclick="showPage('dashboard', this)">
+          <img src="assets/dashboard-icon.svg" class="sidebar-icon">Dashboard
+        </div>
+      </li>
+      <!-- Dropdown: Settings -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="openMenu(this)">
+          <img src="assets/settings-icon.svg" class="sidebar-icon">Settings
+          <span class="arrow">&#9662;</span>
+        </div>
+        <ul class="submenu">
+          <li onclick="showPage('profile', this)"><img src="assets/profile-icon.svg" class="submenu-icon">Profile</li>
+          <li onclick="showPage('wallet-address', this)"><img src="assets/wallet-icon.svg" class="submenu-icon">Wallet Address</li>
+          <li onclick="showPage('arbitrage-id', this)"><img src="assets/arbitrage-icon.svg" class="submenu-icon">Arbitrage ID</li>
+        </ul>
+      </li>
+      <!-- No Dropdown -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('bot-activation', this)">
+          <img src="assets/bot-icon.svg" class="sidebar-icon">Bot Activation
+        </div>
+      </li>
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('trading-investment-fuel', this)">
+          <img src="assets/trading-fuel-icon.svg" class="sidebar-icon">Trading Investment (Use Fuel)
+        </div>
+      </li>
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('trading-investment-capital', this)">
+          <img src="assets/trading-capital-icon.svg" class="sidebar-icon">Trading Investment (Use Capital)
+        </div>
+      </li>
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('angel-investment', this)">
+          <img src="assets/angel-icon.svg" class="sidebar-icon">Angel Investment
+        </div>
+      </li>
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('cross-investment', this)">
+          <img src="assets/cross-icon.svg" class="sidebar-icon">Cross Investment
+        </div>
+      </li>
+
+      <!-- Dropdown: Network -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="openMenu(this)">
+          <img src="assets/network-icon.svg" class="sidebar-icon">Network
+          <span class="arrow">&#9662;</span>
+        </div>
+        <ul class="submenu">
+          <li onclick="showPage('direct-team', this)"><img src="assets/direct-icon.svg" class="submenu-icon">Direct Team</li>
+          <li onclick="showPage('all-team', this)"><img src="assets/all-icon.svg" class="submenu-icon">All Team</li>
+          <li onclick="showPage('business-history', this)"><img src="assets/business-history-icon.svg" class="submenu-icon">Business History</li>
+        </ul>
+      </li>
+
+      <!-- Dropdown: Incomes -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="openMenu(this)">
+          <img src="assets/income-icon.svg" class="sidebar-icon">Incomes
+          <span class="arrow">&#9662;</span>
+        </div>
+        <ul class="submenu">
+          <li onclick="showPage('referral-income', this)"><img src="assets/referral-icon.svg" class="submenu-icon">Referal Income</li>
+          <li onclick="showPage('generation-income', this)"><img src="assets/generation-icon.svg" class="submenu-icon">Generation Income</li>
+          <li onclick="showPage('matching-income', this)"><img src="assets/matching-icon.svg" class="submenu-icon">Matching Income</li>
+          <li onclick="showPage('leadership-pool-income', this)"><img src="assets/pool-icon.svg" class="submenu-icon">Leadership Pool Income</li>
+          <li onclick="showPage('rapid-rise-bonus', this)"><img src="assets/rapid-icon.svg" class="submenu-icon">Rapid Rise Bonus</li>
+          <li onclick="showPage('reward-income', this)"><img src="assets/reward-income-icon.svg" class="submenu-icon">Reward Income</li>
+          <li onclick="showPage('ibi-income', this)"><img src="assets/ibi-icon.svg" class="submenu-icon">IB Income</li>
+          <li onclick="showPage('trading-profit-income', this)"><img src="assets/trading-icon.svg" class="submenu-icon">Trading Profit Income</li>
+        </ul>
+      </li>
+
+      <!-- Dropdown: Deposit -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="openMenu(this)">
+          <img src="assets/deposit-icon.svg" class="sidebar-icon">Deposit
+          <span class="arrow">&#9662;</span>
+        </div>
+        <ul class="submenu">
+          <li onclick="showPage('deposit-fund-online', this)"><img src="assets/fund-online-icon.svg" class="submenu-icon">Deposit Fund (Online)</li>
+          <li onclick="showPage('deposit-invoice', this)"><img src="assets/invoice-icon.svg" class="submenu-icon">Deposit Invoice</li>
+          <li onclick="showPage('deposit-fund-offline', this)"><img src="assets/fund-offline-icon.svg" class="submenu-icon">Deposit Fund (Offline)</li>
+          <li onclick="showPage('deposit-invoice2', this)"><img src="assets/invoice-icon.svg" class="submenu-icon">Deposit Invoice</li>
+        </ul>
+      </li>
+
+      <!-- Dropdown: Transfer -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="openMenu(this)">
+          <img src="assets/transfer-icon.svg" class="sidebar-icon">Transfer
+          <span class="arrow">&#9662;</span>
+        </div>
+        <ul class="submenu">
+          <li onclick="showPage('transfer-topup-wallet', this)"><img src="assets/topup-icon.svg" class="submenu-icon">Transfer to Topup Wallet</li>
+          <li onclick="showPage('transfer-package-wallet', this)"><img src="assets/package-icon.svg" class="submenu-icon">Transfer to Package Wallet</li>
+          <li onclick="showPage('transfer-fuel-wallet', this)"><img src="assets/fuel-icon.svg" class="submenu-icon">Transfer to Fuel Wallet</li>
+          <li onclick="showPage('transfer-report', this)"><img src="assets/report-icon.svg" class="submenu-icon">Transfer Report</li>
+          <li onclick="showPage('receive-report', this)"><img src="assets/report-icon.svg" class="submenu-icon">Receive Report</li>
+        </ul>
+      </li>
+
+      <!-- No Dropdown -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('swap', this)">
+          <img src="assets/swap-icon.svg" class="sidebar-icon">Swap
+        </div>
+      </li>
+
+      <!-- Dropdown: Financial -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="openMenu(this)">
+          <img src="assets/financial-icon.svg" class="sidebar-icon">Financial
+          <span class="arrow">&#9662;</span>
+        </div>
+        <ul class="submenu">
+          <li onclick="showPage('withdraw-fund', this)"><img src="assets/withdraw-icon.svg" class="submenu-icon">Withdraw Fund</li>
+          <li onclick="showPage('withdraw-trading', this)"><img src="assets/trading-icon.svg" class="submenu-icon">Withdraw Trading</li>
+          <li onclick="showPage('withdraw-report', this)"><img src="assets/report-icon.svg" class="submenu-icon">Withdraw Report</li>
+          <li onclick="showPage('account-statement', this)"><img src="assets/account-icon.svg" class="submenu-icon">Account Statement</li>
+          <li onclick="showPage('income-summary', this)"><img src="assets/summary-icon.svg" class="submenu-icon">Income Summary</li>
+        </ul>
+      </li>
+
+      <!-- No Dropdown -->
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('rank-reward', this)">
+          <img src="assets/rank-icon.svg" class="sidebar-icon">Rank & Reward
+        </div>
+      </li>
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('support', this)">
+          <img src="assets/support-icon.svg" class="sidebar-icon">Support
+        </div>
+      </li>
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('presentation', this)">
+          <img src="assets/presentation-icon.svg" class="sidebar-icon">Presentation
+        </div>
+      </li>
+      <li class="menu-block">
+        <div class="menu-heading" onclick="showPage('logout', this)">
+          <img src="assets/logout-icon.svg" class="sidebar-icon">Logout
+        </div>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <section class="main-content">
+
+    <!-- Dashboard (Default) -->
+    <div class="page-section active" id="page-dashboard"><h2>Dashboard</h2></div>
+    <!-- Settings -->
+    <div class="page-section" id="page-profile"><h2>Profile</h2></div>
+    <div class="page-section" id="page-wallet-address"><h2>Wallet Address</h2></div>
+    <div class="page-section" id="page-arbitrage-id"><h2>Arbitrage ID</h2></div>
+    <!-- Bot ... -->
+    <div class="page-section" id="page-bot-activation"><h2>Bot Activation</h2></div>
+    <div class="page-section" id="page-trading-investment-fuel"><h2>Trading Investment (Use Fuel)</h2></div>
+    <div class="page-section" id="page-trading-investment-capital"><h2>Trading Investment (Use Capital)</h2></div>
+    <div class="page-section" id="page-angel-investment"><h2>Angel Investment</h2></div>
+    <div class="page-section" id="page-cross-investment"><h2>Cross Investment</h2></div>
+    <!-- Network -->
+    <div class="page-section" id="page-direct-team"><h2>Direct Team</h2></div>
+    <div class="page-section" id="page-all-team"><h2>All Team</h2></div>
+    <div class="page-section" id="page-business-history"><h2>Business History</h2></div>
+    <!-- Incomes -->
+    <div class="page-section" id="page-referral-income"><h2>Referal Income</h2></div>
+    <div class="page-section" id="page-generation-income"><h2>Generation Income</h2></div>
+    <div class="page-section" id="page-matching-income"><h2>Matching Income</h2></div>
+    <div class="page-section" id="page-leadership-pool-income"><h2>Leadership Pool Income</h2></div>
+    <div class="page-section" id="page-rapid-rise-bonus"><h2>Rapid Rise Bonus</h2></div>
+    <div class="page-section" id="page-reward-income"><h2>Reward Income</h2></div>
+    <div class="page-section" id="page-ibi-income"><h2>IB Income</h2></div>
+    <div class="page-section" id="page-trading-profit-income"><h2>Trading Profit Income</h2></div>
+    <!-- Deposit -->
+    <div class="page-section" id="page-deposit-fund-online"><h2>Deposit Fund (Online)</h2></div>
+    <div class="page-section" id="page-deposit-invoice"><h2>Deposit Invoice</h2></div>
+    <div class="page-section" id="page-deposit-fund-offline"><h2>Deposit Fund (Offline)</h2></div>
+    <div class="page-section" id="page-deposit-invoice2"><h2>Deposit Invoice</h2></div>
+    <!-- Transfer -->
+    <div class="page-section" id="page-transfer-topup-wallet"><h2>Transfer to Topup Wallet</h2></div>
+    <div class="page-section" id="page-transfer-package-wallet"><h2>Transfer to Package Wallet</h2></div>
+    <div class="page-section" id="page-transfer-fuel-wallet"><h2>Transfer to Fuel Wallet</h2></div>
+    <div class="page-section" id="page-transfer-report"><h2>Transfer Report</h2></div>
+    <div class="page-section" id="page-receive-report"><h2>Receive Report</h2></div>
+    <!-- Swap -->
+    <div class="page-section" id="page-swap"><h2>Swap</h2></div>
+    <!-- Financial -->
+    <div class="page-section" id="page-withdraw-fund"><h2>Withdraw Fund</h2></div>
+    <div class="page-section" id="page-withdraw-trading"><h2>Withdraw Trading</h2></div>
+    <div class="page-section" id="page-withdraw-report"><h2>Withdraw Report</h2></div>
+    <div class="page-section" id="page-account-statement"><h2>Account Statement</h2></div>
+    <div class="page-section" id="page-income-summary"><h2>Income Summary</h2></div>
+    <!-- Rank & Reward -->
+    <div class="page-section" id="page-rank-reward"><h2>Rank and Rewards</h2></div>
+    <!-- Support -->
+    <div class="page-section" id="page-support"><h2>Support</h2></div>
+    <!-- Presentation -->
+    <div class="page-section" id="page-presentation"><h2>Presentation</h2></div>
+    <!-- Logout -->
+    <div class="page-section" id="page-logout"><h2>Logout</h2></div>
+
+  </section>
+</div>
+
+<!-- SIDEBAR / PAGE LOGIC -->
+<script>
+function openMenu(el) {
+  document.querySelectorAll('.menu-heading').forEach(h=>{
+    let block = h.parentNode;
+    if(block.classList.contains('menu-block')) block.classList.remove('open');
+    h.classList.remove('active');
+    let arrow = h.querySelector('.arrow');
+    if(arrow) arrow.classList.remove('open');
+  });
+  document.querySelectorAll('.submenu li').forEach(li=>li.classList.remove('active'));
+  el.classList.add('active');
+  let block = el.parentNode;
+  block.classList.add('open');
+  let arrow = el.querySelector('.arrow');
+  if(arrow) arrow.classList.add('open');
+}
+// Show relevant page
+function showPage(pageId, liEl) {
+  document.querySelectorAll('.page-section').forEach(sec=>sec.classList.remove('active'));
+  let page = document.getElementById('page-'+pageId);
+  if(page) page.classList.add('active');
+  document.querySelectorAll('.submenu li').forEach(li=>li.classList.remove('active'));
+  document.querySelectorAll('.menu-heading').forEach(h=>h.classList.remove('active'));
+  if(liEl) {
+    liEl.classList.add('active');
+    let parentMenu = liEl.closest('.menu-block').querySelector('.menu-heading');
+    parentMenu.classList.add('active');
+  } else {
+    let headingList = document.querySelectorAll('.menu-heading');
+    headingList.forEach(h=>{
+      let txtId = h.getAttribute('onclick');
+      if(txtId && txtId.includes(pageId)) h.classList.add('active');
+    });
+  }
+}
+// Show dashboard by default on page load
+showPage('dashboard', document.querySelector('.menu-heading.active'));
+</script>
+</body>
+</html>
