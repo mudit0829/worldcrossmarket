@@ -334,4 +334,61 @@ body {
   .wallet-form-row label {min-width:0;}
   .wallet-submit-btn {width:100%; float:none;}
 }
+//------ aribitrage ID -----------
+
+.arbid-bg {
+  max-width: 440px;
+  margin: 48px auto 0 auto;
+}
+.arbid-breadcrumb {
+  font-size: 14px;
+  color: #6e7285;
+  margin-bottom: 26px;
+}
+.arbid-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.arbid-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(54,91,181,0.07);
+  padding: 44px 38px 36px 38px;
+  text-align: center;
+}
+.arbid-avatar-lg {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 22px auto;
+  border: 3px solid #e3eaf7;
+  display: block;
+  box-shadow: 0 2px 10px rgba(0,91,181,0.07);
+}
+.arbid-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #005bb5;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+  display: inline-block;
+}
+.arbid-verified {
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  vertical-align: -2px;
+}
+.arbid-id-val {
+  font-size: 20px;
+  color: #22315a;
+  font-weight: 700;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+@media (max-width:700px){
+  .arbid-card {padding: 22px 6px;}
+  .arbid-bg {max-width:96vw;}
+}
 
