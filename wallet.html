@@ -1,0 +1,52 @@
+<div class="settings-content">
+  <div class="settings-breadcrumb">Settings / <span>Wallet Address</span></div>
+  <div class="wallet-card">
+    <div class="profile-title">Add New USDT.BEP20 Address to Receive Profits</div>
+    <form>
+      <div class="profile-row">
+        <label>Select Wallet</label>
+        <select>
+          <option>USDT.BEP20</option>
+          <!-- Add more wallet types if needed -->
+        </select>
+      </div>
+      <div class="profile-row">
+        <label>Address</label>
+        <input type="text" placeholder="Enter Wallet Address" />
+      </div>
+      <div class="profile-row">
+        <label>Transaction Password</label>
+        <input type="password" placeholder="******" />
+      </div>
+      <div class="profile-row">
+        <label>One Time Password</label>
+        <input type="text" placeholder="Enter One Time Password" style="width:60%;" />
+        <button type="button" class="otp-btn">Send OTP</button>
+      </div>
+      <button class="update-btn" type="submit">Submit</button>
+    </form>
+    <table class="wallet-table">
+      <thead>
+        <tr><th>#</th><th>Wallet</th><th>Address</th><th>Created At</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <!-- Example row -->
+        <tr><td>1</td><td>USDT.BEP20</td><td>0x....</td><td>2025-08-13</td><td>Active</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+.wallet-card { background:#fff; border-radius:14px; box-shadow:0 2px 14px rgba(0,0,0,0.04); max-width:640px; margin:0 auto; padding:36px 32px;}
+.profile-title{font-size:21px;font-weight:600;color:#005bb5;text-align:left;margin-bottom:22px;}
+.profile-row {margin-bottom:15px;}
+.profile-row label{font-size:15px; font-weight:500;margin-bottom:5px;display:block;}
+.profile-row input, .profile-row select {padding:10px 12px;border:1px solid #d3e3fa;border-radius:8px;font-size:15px;width:100%;margin-bottom:5px;}
+.otp-btn{margin-left:8px;padding:10px 17px;background:#3c83f7;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;}
+.otp-btn:hover{background:#2867c5;}
+.update-btn {margin-top:18px;width:100%;padding:13px 0;background:#005bb5;color:#fff; border:none; border-radius:8px; font-size:17px; font-weight:600; cursor:pointer;}
+.wallet-table{margin-top:30px; width:100%; border-collapse:collapse;}
+.wallet-table th, .wallet-table td{font-size:14px;border-bottom:1px solid #eef2fa;padding:10px 6px;}
+.wallet-table th{background:#f5f7fa;font-weight:600;}
+</style>
