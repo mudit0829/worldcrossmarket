@@ -954,4 +954,194 @@ body {
   .angelinvestment-wallet-row {gap:10px;}
   .angelinvestment-report-panel,.angelinvestment-form-panel {min-width:0;}
 }
+----------------Cross Investment ---------------------------------------
+
+.crossinvestment-bg {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+}
+.crossinvestment-breadcrumb {
+  font-size: 14px;
+  color: #6e7285;
+  margin-bottom: 17px;
+}
+.crossinvestment-breadcrumb span {
+  color: #005bb5;
+  font-weight: 600;
+}
+.crossinvestment-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 38px rgba(54,91,181,0.10);
+  padding: 44px 44px 36px 44px;
+}
+.crossinvestment-notifybar {
+  background: #f3f7ff;
+  border-radius: 10px;
+  color: #2075c3;
+  padding: 13px 17px;
+  font-size: 14.2px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  border: 1px solid #ddeefa;
+}
+.crossinvestment-notify-title {
+  font-size:15px;
+  font-weight:600;
+  color: #2075c3;
+  margin-bottom:2px;
+  display:inline-block;
+}
+.crossinvestment-wallet-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 21px;
+}
+.crossinvestment-wallet {
+  background: #f7fafd;
+  border-radius: 14px;
+  flex: 1 1 220px;
+  padding: 16px 26px;
+  box-shadow: 0 2px 7px rgba(110,159,218,0.09);
+  text-align: left;
+}
+.crossinvestment-wallet-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2075c3;
+  margin-bottom: 2px;
+}
+.crossinvestment-wallet-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2075c3;
+}
+.crossinvestment-main-row {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  margin-top: 14px;
+}
+.crossinvestment-form-panel {
+  flex: 1.12 1 0;
+  min-width: 280px;
+}
+.crossinvestment-form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2075c3;
+  margin-bottom: 13px;
+}
+.crossinvestment-form-row {
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.crossinvestment-form-row label {
+  font-size:14px;
+  font-weight:500;
+  color:#2075c3;
+  margin-bottom:5px;
+}
+.crossinvestment-form-row input,
+.crossinvestment-form-row select {
+  font-size:15px;
+  border:1.2px solid #c5daf7;
+  border-radius:8px;
+  background:#f7fafd;
+  color:#222;
+  padding:10.5px 13px;
+  margin-top:2px;
+  transition: border 0.17s;
+}
+.crossinvestment-form-row input:focus,
+.crossinvestment-form-row select:focus {
+  border-color:#005bb5;
+  outline:none;
+  background:#e7f3fd;
+}
+.crossinvestment-hint {
+  font-size: 12px;
+  color: #ad2a2a;
+  margin-top: 2px;
+  font-style: italic;
+}
+.crossinvestment-otp-btn {
+  background: #2873cd;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 8px rgba(54,91,181,0.07);
+  transition: background 0.18s;
+}
+.crossinvestment-otp-btn:hover {
+  background: #145599;
+}
+.crossinvestment-submit-btn {
+  background: #2075c3;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 38px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top:12px;
+  float:right;
+  box-shadow: 0 2px 8px rgba(30,60,130,0.09);
+  transition: background 0.17s;
+}
+.crossinvestment-submit-btn:hover {
+  background: #145599;
+}
+.crossinvestment-report-panel {
+  flex: 1.08 1 0;
+  min-width: 330px;
+  margin-left:6px;
+}
+.crossinvestment-report-title {
+  font-size: 16px;
+  color: #2075c3;
+  font-weight: 600;
+  margin-bottom: 9px;
+  padding-left: 2px;
+}
+.crossinvestment-table {
+  width: 100%;
+  background: #f7fafd;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13.8px;
+  box-shadow: 0 1px 8px rgba(110,159,218,0.07);
+}
+.crossinvestment-table th {
+  background: #f5f8ff;
+  color: #2873cd;
+  font-weight: 600;
+  padding: 8px 8px;
+  border-bottom: 1.3px solid #ddeefa;
+  font-size: 13.2px;
+}
+.crossinvestment-table td {
+  padding: 8px 8px;
+  color: #2075c3;
+  background: #f7fafd;
+  border-bottom: 1px solid #ddeefa;
+}
+.crossinvestment-table tr:last-child td {
+  border-bottom:none;
+}
+@media (max-width:950px) {
+  .crossinvestment-bg {padding: 0 2vw;}
+  .crossinvestment-card {padding: 18px 2vw;}
+  .crossinvestment-main-row {flex-direction:column; gap:19px;}
+  .crossinvestment-wallet-row {gap:10px;}
+  .crossinvestment-report-panel, .crossinvestment-form-panel {min-width:0;}
+}
 
