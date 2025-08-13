@@ -1,99 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WorldCrossMarket.ai - Login</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f7fb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .login-box {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      width: 320px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .login-box img {
-      width: 72px;
-      margin-bottom: 15px;
-    }
-    .login-box h2 {
-      margin-bottom: 20px;
-      color: #005bb5;
-    }
-    .login-box input[type="text"],
-    .login-box input[type="password"] {
-      width: 100%;
-      padding: 12px 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-    .login-box button {
-      width: 100%;
-      padding: 12px;
-      background-color: #005bb5;
-      border: none;
-      border-radius: 6px;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background-color 0.3s ease;
-    }
-    .login-box button:hover {
-      background-color: #004494;
-    }
-    .login-box .links {
-      margin-top: 12px;
-      font-size: 14px;
-      color: #555;
-    }
-    .login-box .links a {
-      color: #005bb5;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorldCrossMarket.ai - Login</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f1f5fa;
+}
+
+.login-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left Panel (Illustration) */
+.left-panel {
+  flex: 1;
+  background: url('left-image.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right Panel (Form) */
+.right-panel {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.05);
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-box img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 80px;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #005bb5;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #005bb5;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.remember-me input {
+  margin-right: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #005bb5;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #004494;
+}
+
+.links {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.links a {
+  color: #005bb5;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+@media(max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .left-panel {
+    height: 200px;
+  }
+}
+</style>
 </head>
 <body>
-  <div class="login-box">
-    <!-- Replace the src with your actual logo image path -->
-    <img src="your-logo.png" alt="WorldCrossMarket.ai Logo" />
-    <h2>Login to WorldCrossMarket.ai</h2>
-    <input type="text" id="username" placeholder="Username" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Sign In</button>
-    <div class="links">
-      <a href="#">Forgot Password?</a> | <a href="#">Sign Up</a>
-    </div>
+
+<div class="login-container">
+  <!-- Left Side -->
+  <div class="left-panel">
+    <!-- Optional text or overlay -->
   </div>
 
-  <script>
-    function login() {
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value.trim();
+  <!-- Right Side -->
+  <div class="right-panel">
+    <div class="login-box">
+      <img src="your-logo.png" alt="WorldCrossMarket.ai Logo">
+      <h2>Sign in to your account</h2>
 
-      if (!username || !password) {
-        alert('Please enter both username and password.');
-        return;
-      }
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Enter Username">
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Enter Password">
+      </div>
 
-      // For demo: just show an alert (no backend yet)
-      alert('Login clicked with Username: ' + username);
-      
-      // In future: add real login logic with backend API
-    }
-  </script>
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button onclick="login()">Sign In</button>
+
+      <div class="links">
+        <a href="#">Forgot Password?</a> | <a href="#">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function login() {
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+
+  if (!username || !password) {
+    alert('Please enter both username and password.');
+    return;
+  }
+
+  alert('Login successful (demo mode)');
+  // In future: Connect with backend API
+}
+</script>
+
 </body>
 </html>
