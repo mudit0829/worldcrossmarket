@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fa;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background: #fff;
+  border-right: 1px solid #e3e8ee;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  display: block;
+  width: 58px;
+  margin: 16px auto;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li,
+.sidebar-menu .has-sub > div {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-icon, .submenu-icon {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.sidebar-menu li:hover, .has-sub > div:hover {
+  background: #eef6ff;
+}
+
+.submenu {
+  display: none;
+  list-style: none;
+  padding-left: 26px;
+}
+
+.submenu li {
+  padding: 8px 16px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
