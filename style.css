@@ -61,3 +61,28 @@ body {
   padding: 20px;
   overflow-y: auto;
 }
+.referral-container { display:flex; justify-content:flex-end; margin-bottom:18px; }
+.referral-link-box { background:#fff; border-radius:10px; box-shadow:0 1px 8px rgba(0,0,0,0.03); padding:8px 12px; display:flex; align-items:center; font-size:14px; width:390px; }
+.referral-link-label { font-weight:600; margin-right:8px; }
+.referral-link-input { background:#f4f7fb; border:none; font-size:13px; padding:5px 8px; border-radius:6px; flex:1; }
+.referral-link-copy { background-color:#3c83f7; color:#fff; border:none; border-radius:6px; padding:5px 10px; font-size:12px; cursor:pointer; }
+.wallets-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:24px; }
+.wallet-card { background:#fff; border-radius:10px; box-shadow:0 1px 8px rgba(0,0,0,0.03); padding:14px; height:88px; }
+.wallet-title { font-size:15px; font-weight:600; margin-bottom:6px; }
+.wallet-amount { font-size:24px; font-weight:700; color:#005bb5; }
+.summary-row { display:flex; gap:16px; margin-bottom:20px; }
+.income-banner, .withdraw-banner { flex:1; border-radius:12px; height:66px; font-size:22px; font-weight:700; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 1px 6px rgba(0,0,0,0.03); }
+.income-banner { background:#e7f3ff; color:#2288dd; }
+.withdraw-banner { background:#fae2f4; color:#b74399; }
+.cards-row { display:flex; gap:16px; }
+.profile-card, .business-details, .income-details { background:#fff; border-radius:12px; box-shadow:0 1px 8px rgba(0,0,0,0.03); padding:22px; font-size:13px; max-width:340px; flex:1; }
+.profile-row { display:flex; align-items:center; margin-bottom:12px; }
+.profile-avatar { width:48px; height:48px; border-radius:50%; object-fit:cover; margin-right:14px; border:2px solid #eef2fa; }
+.profile-info { font-size:16px; font-weight:600; }
+.profile-id { font-size:13px; color:#005bb5; }
+.profile-table { width:100%; border-collapse:collapse; }
+.profile-table td { padding:3px 0; }
+.close-report-btn { margin-top:10px; background:#2346ad; color:#fff; border:none; padding:6px 12px; border-radius:5px; font-size:12px; cursor:pointer; }
+.card-header { font-size:15px; font-weight:700; color:#3c83f7; margin-bottom:8px; }
+.detail-table { width:100%; border-collapse:collapse; }
+.detail-table td { padding:3px 0; font-size:13px; }
