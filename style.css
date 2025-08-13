@@ -87,8 +87,9 @@ body {
 .detail-table { width:100%; border-collapse:collapse; }
 .detail-table td { padding:3px 0; font-size:13px; }
 .profile-bg {
-  max-width:600px;
-  margin:40px auto 0 auto;
+  max-width: 860px;      /* Wider, matches screenshot proportions */
+  margin: 40px auto 0 auto;
+  padding: 0 20px;       /* Padding on smaller screens */
 }
 .profile-breadcrumb {
   font-size:14px;
@@ -103,7 +104,7 @@ body {
   background:#fff;
   border-radius:22px;
   box-shadow:0 6px 32px rgba(54,91,181,0.07);
-  padding:40px 38px 28px 38px;
+  padding: 44px 46px 36px 46px; /* More side padding for wider card */
 }
 .profile-header {
   text-align:center;
@@ -193,9 +194,11 @@ body {
   .profile-form-grid {grid-template-columns:1fr;}
   .profile-form-actions {grid-column:1; text-align:right;}
 }
-.walletaddress-container {
-  max-width:840px;
-  margin:38px auto 0 auto;
+//---------Wallet Address----------
+..walletaddress-container {
+  max-width: 1000px;    /* Wider than before for desktop */
+  margin: 38px auto 0 auto;
+  padding: 0 20px;
 }
 .wallet-breadcrumb {
   font-size:15px;
@@ -210,7 +213,7 @@ body {
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-  padding: 32px 44px 34px 44px;
+  padding: 36px 50px 38px 50px;
 }
 .wallet-reminder {
   background: #f0f7ff;
@@ -337,8 +340,9 @@ body {
 //------ aribitrage ID -----------
 
 .arbid-bg {
-  max-width: 440px;
+  max-width: 600px; /* Increased from 440px */
   margin: 48px auto 0 auto;
+  padding: 0 20px;
 }
 .arbid-breadcrumb {
   font-size: 14px;
@@ -353,7 +357,7 @@ body {
   background: #fff;
   border-radius: 22px;
   box-shadow: 0 6px 32px rgba(54,91,181,0.07);
-  padding: 44px 38px 36px 38px;
+  padding: 50px 48px 42px 48px;
   text-align: center;
 }
 .arbid-avatar-lg {
