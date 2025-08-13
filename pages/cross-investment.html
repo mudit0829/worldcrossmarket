@@ -1,0 +1,97 @@
+<div class="crossinvestment-bg">
+  <!-- Breadcrumbs -->
+  <div class="crossinvestment-breadcrumb">
+    Home / <span>Cross Investment</span>
+  </div>
+
+  <div class="crossinvestment-card">
+    <!-- Notification -->
+    <div class="crossinvestment-notifybar">
+      <span class="crossinvestment-notify-title">Notification</span><br>
+      Here, you can investment of amount to get more trading benefits
+    </div>
+
+    <!-- Cross Wallet box -->
+    <div class="crossinvestment-wallet-row">
+      <div class="crossinvestment-wallet">
+        <div class="crossinvestment-wallet-label">Cross Wallet</div>
+        <div class="crossinvestment-wallet-value">$0</div>
+      </div>
+    </div>
+
+    <div class="crossinvestment-main-row">
+      <!-- Fill Trading Details Form -->
+      <div class="crossinvestment-form-panel">
+        <div class="crossinvestment-form-title">Fill Trading Details</div>
+        <form autocomplete="off">
+          <div class="crossinvestment-form-row">
+            <label>User ID</label>
+            <input type="text" placeholder="Enter User ID">
+          </div>
+          <div class="crossinvestment-form-row">
+            <label>Investment Amount</label>
+            <input type="number" placeholder="Enter amount">
+            <div class="crossinvestment-hint">
+              The minimum amount limit is $10 and must be in multiples of $10.
+            </div>
+          </div>
+          <div class="crossinvestment-form-row">
+            <label>Transaction Password</label>
+            <input type="password" placeholder="******">
+          </div>
+          <div class="crossinvestment-form-row">
+            <label>One Time Password</label>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <input type="text" placeholder="Enter One Time Password" style="flex:1;">
+              <button type="button" class="crossinvestment-otp-btn">Send OTP</button>
+            </div>
+          </div>
+          <div class="crossinvestment-form-row">
+            <label>Remarks</label>
+            <input type="text" placeholder="Remarks...">
+          </div>
+          <div class="crossinvestment-form-row" style="display:flex;align-items:center;gap:10px;">
+            <input type="checkbox" id="checkmecross" style="width:18px;height:18px;margin:0;">
+            <label for="checkmecross" style="font-size:13.7px; font-weight:500;color:#555;">
+              Check me out
+            </label>
+          </div>
+          <button class="crossinvestment-submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- Report Table -->
+      <div class="crossinvestment-report-panel">
+        <div class="crossinvestment-report-title">Report</div>
+        <div style="margin:0 0 8px 0;font-size:13px;">
+          Show
+          <select style="font-size:13px; border-radius:4px; border:1px solid #d2dbed;padding:.5px 8px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+          entries
+        </div>
+        <table class="crossinvestment-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Mode</th>
+              <th>Date</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="7" style="text-align:center;color:#b7bfd2;font-size:15px;font-style:italic;">
+                No data available in table
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
