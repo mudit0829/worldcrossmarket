@@ -1,0 +1,64 @@
+<!-- Settings Sidebar Navigation: -->
+<div class="settings-sidebar">
+  <div class="settings-title">Settings</div>
+  <ul>
+    <li class="active"><a href="#">Profile</a></li>
+    <li><a href="#">Wallet Address</a></li>
+    <li><a href="#">Arbitrage ID</a></li>
+  </ul>
+</div>
+
+<!-- Profile Page Main Content: -->
+<div class="settings-content">
+  <div class="settings-breadcrumb">Home / Setting / <span>Profile</span></div>
+  <div class="profile-card">
+    <img src="your-logo.png" class="profile-logo" alt="Logo" />
+    <div class="profile-title">Profile</div>
+    <form>
+      <div class="profile-row">
+        <label>Name</label>
+        <input type="text" value="Mudit Tiwari" />
+      </div>
+      <div class="profile-row">
+        <label>Email</label>
+        <input type="email" value="mudit8@gmail.com" />
+      </div>
+      <div class="profile-row">
+        <label>Mobile</label>
+        <input type="text" value="8448576369" />
+      </div>
+      <div class="profile-row">
+        <label>Country</label>
+        <input type="text" value="India" />
+      </div>
+      <div class="profile-row">
+        <label>Transaction Password</label>
+        <input type="password" value="******" />
+      </div>
+      <button class="update-btn" type="submit">Update</button>
+    </form>
+  </div>
+</div>
+
+<!-- Basic CSS for clean clone look: -->
+<style>
+.settings-sidebar { width:220px; background:#fff; box-shadow:2px 0 10px rgba(0,0,0,0.03); padding:34px 0; }
+.settings-title { font-size:20px; font-weight:600; margin-left:30px; }
+.settings-sidebar ul { list-style:none; padding:0; margin:26px 0 0 30px; }
+.settings-sidebar li { margin-bottom:18px; }
+.settings-sidebar li a { color:#22315a; text-decoration:none; font-size:16px; padding:3px 12px; border-radius:5px; }
+.settings-sidebar li.active a { background:#eef6ff; color:#005bb5; font-weight:600; }
+.settings-content { padding:40px 60px;}
+.settings-breadcrumb {font-size:14px; color:#666; margin-bottom:26px;}
+.profile-card {
+  background:#fff; border-radius:14px; box-shadow:0 2px 14px rgba(0,0,0,0.04);
+  max-width:440px; margin:0 auto; padding:38px 32px;
+}
+.profile-logo{ width:85px;display:block; margin:0 auto 18px;}
+.profile-title{font-size:24px;font-weight:600; color:#005bb5; text-align:center;margin-bottom:22px;}
+.profile-row{margin-bottom:15px;display:flex;flex-direction:column;}
+.profile-row label{font-size:15px; font-weight:500;color:#22315a;margin-bottom:5px;}
+.profile-row input{padding:12px 14px;border:1px solid #d3e3fa; border-radius:8px; font-size:15px;}
+.update-btn{margin-top:18px;width:100%;padding:12px 0;background:#005bb5;color:#fff; border:none; border-radius:8px; font-size:17px; font-weight:600; cursor:pointer;}
+.update-btn:hover{background:#004494;}
+</style>
