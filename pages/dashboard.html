@@ -1,0 +1,94 @@
+<!-- Referral Link Box -->
+<div class="referral-container">
+  <div class="referral-link-box">
+    <span class="referral-link-label">Referral Link</span>
+    <input class="referral-link-input" type="text" readonly 
+           value="http://worldcrossmarket.ai/auth/signup?referral=XM11622579" id="ref-link" />
+    <button class="referral-link-copy" onclick="copyReferralLink()">Copy</button>
+  </div>
+</div>
+
+<!-- Wallets Grid -->
+<div class="wallets-grid">
+  <div class="wallet-card"><div class="wallet-title">Income Wallet</div><div class="wallet-amount">$0</div></div>
+  <div class="wallet-card"><div class="wallet-title">Angel Wallet</div><div class="wallet-amount">$0</div></div>
+  <div class="wallet-card"><div class="wallet-title">Fuel Income Wallet</div><div class="wallet-amount">$0</div></div>
+  <div class="wallet-card"><div class="wallet-title">Fuel Wallet</div><div class="wallet-amount">$0</div></div>
+  <div class="wallet-card"><div class="wallet-title">Topup Wallet</div><div class="wallet-amount">$0</div></div>
+  <div class="wallet-card"><div class="wallet-title">Package Wallet</div><div class="wallet-amount">$0</div></div>
+  <div class="wallet-card"><div class="wallet-title">Capital Wallet</div><div class="wallet-amount">$0</div></div>
+  <div class="wallet-card"><div class="wallet-title">Cross Wallet</div><div class="wallet-amount">$0</div></div>
+</div>
+
+<!-- Summary Banners -->
+<div class="summary-row">
+  <div class="income-banner">Total Income<br>$0</div>
+  <div class="withdraw-banner">Total Withdraw<br>$0</div>
+</div>
+
+<!-- Lower cards -->
+<div class="cards-row">
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <div class="profile-row">
+      <img src="assets/avatar.jpg" alt="Avatar" class="profile-avatar" />
+      <div>
+        <div class="profile-info">Mudit Tiwari</div>
+        <div class="profile-id">XM11622579</div>
+      </div>
+    </div>
+    <table class="profile-table">
+      <tr><td>Referral ID</td><td>XM98053</td></tr>
+      <tr><td>Bot License</td><td>Inactive</td></tr>
+      <tr><td>Trading ARB Amount</td><td>0.0000</td></tr>
+      <tr><td>Angel ARB Amount</td><td>0.0000</td></tr>
+      <tr><td>Cross ARB Amount</td><td>0</td></tr>
+      <tr><td>Rank</td><td>NA</td></tr>
+      <tr><td>Date of Joining</td><td>7/14/2025 6:25:29 PM</td></tr>
+      <tr><td>Date of Activation</td><td>-</td></tr>
+    </table>
+    <button class="close-report-btn">Click to View Closing Report</button>
+  </div>
+
+  <!-- Business Details -->
+  <div class="business-details">
+    <div class="card-header">Business Details</div>
+    <table class="detail-table">
+      <tr><td>Direct Bot</td><td>0</td></tr>
+      <tr><td>Total Bot</td><td>0</td></tr>
+      <tr><td>Team Business (Trading/Angel)</td><td>0/0</td></tr>
+      <tr><td>Total Team (Left/Right)</td><td>0/0</td></tr>
+      <tr><td>Strong/Weaker Leg Bot</td><td>0/0</td></tr>
+      <tr><td>Total Bot (Left/Right)</td><td>0/0</td></tr>
+      <tr><td>Bot Carry Forward (Left/Right)</td><td>0/0</td></tr>
+      <tr><td>Current Trading Business L/R</td><td>0/0</td></tr>
+      <tr><td>Total Trading Business L/R</td><td>0/0</td></tr>
+      <tr><td>Total Angel Business L/R</td><td>0/0</td></tr>
+    </table>
+  </div>
+
+  <!-- Income Details -->
+  <div class="income-details">
+    <div class="card-header">Income Details</div>
+    <table class="detail-table">
+      <tr><td>Referral Income</td><td>0</td></tr>
+      <tr><td>Generation Income</td><td>0</td></tr>
+      <tr><td>Matching Income</td><td>0</td></tr>
+      <tr><td>Leadership Pool Income</td><td>0</td></tr>
+      <tr><td>Reward Income</td><td>0</td></tr>
+      <tr><td>IBI Income</td><td>0</td></tr>
+      <tr><td>Rapid Rise Bonus</td><td>0</td></tr>
+      <tr><td>Trading Profit Income</td><td>0</td></tr>
+    </table>
+  </div>
+</div>
+
+<script>
+function copyReferralLink() {
+  const refInput = document.getElementById("ref-link");
+  refInput.select();
+  refInput.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(refInput.value);
+  alert("Referral link copied!");
+}
+</script>
