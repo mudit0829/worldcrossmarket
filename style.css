@@ -10,10 +10,10 @@ body {
 }
 
 .sidebar {
-  width: 230px;
+  width: 260px; /* was 230 */
   background: #fff;
   border-right: 1px solid #e3e8ee;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.04);
   overflow-y: auto;
 }
 
@@ -31,15 +31,15 @@ body {
 
 .sidebar-menu li,
 .sidebar-menu .has-sub > div {
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 15px; /* same as screenshot */
+  font-weight: 500;
 }
 
 .sidebar-icon, .submenu-icon {
-  width: 18px;
-  margin-right: 10px;
+  width: 20px; /* icon slightly larger */
+  height: 20px;
+  margin-right: 12px;
 }
 
 .sidebar-menu li:hover, .has-sub > div:hover {
@@ -49,11 +49,12 @@ body {
 .submenu {
   display: none;
   list-style: none;
-  padding-left: 26px;
+  padding-left: 42px;
 }
 
 .submenu li {
-  padding: 8px 16px;
+  font-size: 14px;
+  padding: 9px 0px;
 }
 
 .main-content {
