@@ -1,0 +1,97 @@
+<div class="angelinvestment-bg">
+  <!-- Breadcrumbs -->
+  <div class="angelinvestment-breadcrumb">
+    Home / <span>Angel Investment</span>
+  </div>
+
+  <div class="angelinvestment-card">
+    <!-- Notification -->
+    <div class="angelinvestment-notifybar">
+      <span class="angelinvestment-notify-title">Notification</span><br>
+      Here, you can investment of amount to get more trading benefits
+    </div>
+
+    <!-- Wallet Box -->
+    <div class="angelinvestment-wallet-row">
+      <div class="angelinvestment-wallet">
+        <span class="angelinvestment-wallet-label">Package Wallet</span>
+        <span class="angelinvestment-wallet-value">$0</span>
+      </div>
+    </div>
+
+    <div class="angelinvestment-main-row">
+      <!-- Investment Form (left) -->
+      <div class="angelinvestment-form-panel">
+        <div class="angelinvestment-form-title">Fill Trading Details</div>
+        <form autocomplete="off">
+          <div class="angelinvestment-form-row">
+            <label>User ID</label>
+            <input type="text" placeholder="Enter User ID">
+          </div>
+          <div class="angelinvestment-form-row">
+            <label>Investment Amount</label>
+            <input type="number" placeholder="Enter amount">
+            <div class="angelinvestment-hint">
+              The minimum amount limit is $10 and must be in multiples of $10.
+            </div>
+          </div>
+          <div class="angelinvestment-form-row">
+            <label>Transaction Password</label>
+            <input type="password" placeholder="******">
+          </div>
+          <div class="angelinvestment-form-row">
+            <label>One Time Password</label>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <input type="text" placeholder="Enter One Time Password" style="flex:1;">
+              <button type="button" class="angelinvestment-otp-btn">Send OTP</button>
+            </div>
+          </div>
+          <div class="angelinvestment-form-row">
+            <label>Remarks</label>
+            <input type="text" placeholder="Remarks...">
+          </div>
+          <div class="angelinvestment-form-row" style="display:flex;align-items:center;gap:10px;">
+            <input type="checkbox" id="checkmeangel" style="width:18px;height:18px;margin:0;">
+            <label for="checkmeangel" style="font-size:13.7px; font-weight:500;color:#666;">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" class="angelinvestment-submit-btn">Submit</button>
+        </form>
+      </div>
+      <!-- Report Table (right) -->
+      <div class="angelinvestment-report-panel">
+        <div class="angelinvestment-report-title">Report</div>
+        <div style="margin:0 0 8px 0;font-size:13px;">
+          Show
+          <select style="font-size:13px; border-radius:4px; border:1px solid #d2dbed;padding:.5px 8px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+          entries
+        </div>
+        <table class="angelinvestment-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Mode</th>
+              <th>Date</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="7" style="text-align:center;color:#b7bfd2;font-size:15px;font-style:italic;">
+                No data available in table
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
