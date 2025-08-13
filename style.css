@@ -1230,3 +1230,58 @@ body {
   .network-bg {padding: 0 4vw;}
   .network-card {padding:10px 3vw;}
 }
+----------------------------- All Team -------------------------------------
+
+/* Use existing .network-bg/.network-card/.network-table/... from previous pages! */
+
+.team-filterbar {
+  background: #f4f8ff;
+  border-radius: 10px;
+  padding: 17px 24px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(54,92,181,0.04);
+}
+.team-filter-title {
+  font-weight:700;
+  font-size:16px;
+  color:#3268b5;
+  margin-right:12px;
+}
+.team-filter-date {
+  margin-right:10px;
+  font-size:14px;
+  border:1px solid #d2dbed;
+  border-radius:7px;
+  padding:6px 13px;
+  background:#fff;
+}
+.team-filter-select {
+  margin-right:10px;
+  font-size:14px;
+  border:1px solid #d2dbed;
+  border-radius:7px;
+  padding:7px 15px;
+  background:#fff;
+}
+.team-filter-btn {
+  background:#2075c3;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:600;
+  padding:8px 28px;
+  cursor:pointer;
+  margin-left:8px;
+  box-shadow:0 1px 5px rgba(54,91,181,0.07);
+}
+.team-table-scroll {
+  width:100%;
+  overflow-x:auto;
+}
+.network-table-pagination {
+  text-align:right;
+  margin-top:8px;
+}
