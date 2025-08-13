@@ -1,0 +1,106 @@
+<div class="fueltrading-bg">
+  <!-- Breadcrumbs -->
+  <div class="fueltrading-breadcrumb">
+    Home / <span>Trading Investment (Use Capital)</span>
+  </div>
+
+  <div class="fueltrading-card">
+    <!-- Notification -->
+    <div class="fueltrading-notifybar">
+      <span class="fueltrading-notify-title">Notification</span><br>
+      Here, you can invest with any amount from your Topup Wallet to get more trading benefits
+    </div>
+
+    <!-- Wallets row -->
+    <div class="fueltrading-wallets-row">
+      <div class="fueltrading-wallet">
+        <div class="fueltrading-wallet-label">Topup Wallet</div>
+        <div class="fueltrading-wallet-value">$0</div>
+      </div>
+      <div class="fueltrading-wallet">
+        <div class="fueltrading-wallet-label">Capital Wallet</div>
+        <div class="fueltrading-wallet-value">$0</div>
+      </div>
+    </div>
+
+    <!-- Main two-column section -->
+    <div class="fueltrading-main-row">
+      <!-- Fill Trading Details Form -->
+      <div class="fueltrading-form-panel">
+        <div class="fueltrading-form-title">Fill Trading Details</div>
+        <form autocomplete="off">
+          <div class="fueltrading-form-row">
+            <label>User ID</label>
+            <input type="text" placeholder="Enter User ID">
+          </div>
+          <div class="fueltrading-form-row">
+            <label>Investment Amount</label>
+            <input type="number" placeholder="Enter amount">
+            <div class="fueltrading-hint">
+              <span>
+                The minimum amount limit is $100 and must be in multiples of $10.
+              </span>
+            </div>
+          </div>
+          <div class="fueltrading-form-row">
+            <label>Transaction Password</label>
+            <input type="password" placeholder="******">
+          </div>
+          <div class="fueltrading-form-row">
+            <label>One Time Password</label>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <input type="text" placeholder="Enter One Time Password" style="flex:1;">
+              <button type="button" class="fueltrading-otp-btn">Send OTP</button>
+            </div>
+          </div>
+          <div class="fueltrading-form-row">
+            <label>Remarks</label>
+            <input type="text" placeholder="Remarks...">
+          </div>
+          <div class="fueltrading-form-row" style="display:flex;align-items:center;gap:10px;">
+            <input type="checkbox" id="checkmecapital" style="width:18px;height:18px;margin:0;">
+            <label for="checkmecapital" style="font-size:14px; font-weight:500;color:#666;">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" class="fueltrading-submit-btn">Submit</button>
+        </form>
+      </div>
+
+      <!-- Report Table -->
+      <div class="fueltrading-report-panel">
+        <div class="fueltrading-report-title">Report</div>
+        <div style="margin:0 0 8px 0;font-size:13px;">
+          Show 
+          <select style="font-size:13px; border-radius:4px; border:1px solid #d2dbed;padding:.5px 8px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+          entries
+        </div>
+        <table class="fueltrading-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Wallet Used</th>
+              <th>Mode</th>
+              <th>Date</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8" style="text-align:center;color:#b7bfd2;font-size:15px;font-style:italic;">
+                No data available in table
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
