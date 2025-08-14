@@ -1709,3 +1709,197 @@ body {
 }
 .deposit-invoice-table tr:last-child td { border-bottom: none !important; }
 
+-----------------------Transfer Section ----------------------------------------------
+.transfer-bg {
+  max-width: 900px;
+  margin: 38px auto 0 auto;
+  padding: 0 20px;
+}
+.transfer-breadcrumb {
+  font-size:14px;
+  color:#6e7285;
+  margin-bottom:20px;
+}
+.transfer-breadcrumb span {
+  color:#005bb5;
+  font-weight:600;
+}
+.transfer-card {
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 4px 18px rgba(54,91,181,0.09);
+  padding:36px 38px 32px 38px;
+}
+.transfer-wallet-row {
+  display:flex;
+  gap:18px;
+  margin-bottom:16px;
+}
+.transfer-wallet-box {
+  background:#f7fafd;
+  border-radius:12px;
+  padding:14px 22px;
+  flex:1 1 150px;
+  min-width:170px;
+  box-shadow:0 1px 8px rgba(110,159,218,0.07);
+  text-align:left;
+}
+.transfer-wallet-label {
+  font-size:15px;
+  font-weight:500;
+  color:#2c3365;
+  margin-bottom:2px;
+}
+.transfer-wallet-amount {
+  font-size:22px;
+  font-weight:700;
+  color:#2075c3;
+}
+.transfer-form-title {
+  font-size:17px;
+  font-weight:600;
+  color: #2873cd;
+  margin-bottom:12px;
+}
+.transfer-form-row {
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.transfer-form-row label {
+  min-width:170px;
+  font-size:15px;
+  font-weight:500;
+  color:#2873cd;
+}
+.transfer-form-row input,
+.transfer-form-row select {
+  flex:1;
+  padding:10.5px 13px;
+  border:1.3px solid #cfd8e8;
+  border-radius:8px;
+  background:#f6f8fa;
+  font-size:15px;
+  color:#1d2339;
+  transition:border 0.17s;
+}
+.transfer-form-row input:focus, .transfer-form-row select:focus {
+  border-color:#2075c3;
+  outline:none;
+  background:#f3f8ff;
+}
+.transfer-otp-row input { max-width:200px; }
+.transfer-otp-btn {
+  background: #2075c3;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 9px 20px;
+  cursor: pointer;
+  margin-left:8px;
+}
+.transfer-otp-btn:hover { background: #165a96; }
+.transfer-submit-btn {
+  background:#2075c3;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:600;
+  padding:12px 38px;
+  cursor:pointer;
+  float:right;
+  margin-top:13px;
+  box-shadow:0 2px 8px rgba(30,60,130,0.10);
+  transition:background 0.17s;
+}
+.transfer-submit-btn:hover { background:#165a96; }
+.transfer-report-header {
+  font-size:15px;
+  color:#005bb5;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+.transfer-date {
+  font-size:14px;
+  border-radius:7px;
+  border:1px solid #d2dbed;
+  padding:7px 13px;
+  background:#fff;
+}
+.transfer-filter-btn {
+  background:#2075c3;
+  color:#fff;
+  border:none;
+  border-radius:7px;
+  font-size:15px;
+  font-weight:600;
+  padding:7px 22px;
+  cursor:pointer;
+  margin-left:6px;
+  box-shadow:0 1px 5px rgba(54,91,181,0.07);
+}
+.transfer-table-scroll {
+  width:100%;
+  overflow-x:auto;
+}
+.transfer-table {
+  width:100%;
+  background:#fbfbfc;
+  border-radius:10px;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:13.5px;
+  margin-bottom:10px;
+  box-shadow:0 1px 8px rgba(110,159,218,0.07);
+}
+.transfer-table th {
+  background: #f5f7fa;
+  font-weight:600;
+  padding: 10px 8px;
+  border-bottom: 1px solid #e3e9f1;
+  color: #2873cd;
+  font-size:14px;
+}
+.transfer-table td {
+  padding: 8px 8px;
+  border-bottom: 1px solid #eef1f7;
+  color: #27304c;
+  font-size: 14px;
+}
+.transfer-table tr:last-child td {
+  border-bottom: none !important;
+}
+.transfer-table-pagination {
+  text-align: right;
+  margin: 8px 0;
+}
+.transfer-page-btn {
+  background: #e7f3ff;
+  color: #005bb5;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.transfer-page-btn:disabled {
+  background: #f6f7fa;
+  color: #b4b9cb;
+  cursor: default;
+}
+@media (max-width:900px){
+  .transfer-bg {padding: 0 2vw;}
+  .transfer-card {padding:12px 3vw;}
+  .transfer-wallet-row {flex-direction:column;}
+}
+
+
