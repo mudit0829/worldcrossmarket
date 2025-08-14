@@ -1902,4 +1902,168 @@ body {
   .transfer-wallet-row {flex-direction:column;}
 }
 
+------------------------- Swap --------------------------
+
+.swap-bg {
+  max-width: 650px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+}
+.swap-breadcrumb {
+  font-size:14px;
+  color:#6e7285;
+  margin-bottom:18px;
+}
+.swap-breadcrumb span {
+  color:#005bb5;
+  font-weight:600;
+}
+.swap-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(54,91,181,0.10);
+  padding: 36px 36px 22px 36px;
+}
+.swap-wallets-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.swap-wallet-box {
+  flex: 1 1 120px;
+  background: #f4f7fc;
+  border-radius: 12px;
+  text-align: center;
+  padding: 18px 8px;
+  box-shadow: 0 1px 8px rgba(110,159,218,0.07);
+}
+.swap-wallet-label {
+  font-size:15px;
+  font-weight:600;
+  color:#22315a;
+  margin-bottom:6px;
+}
+.swap-wallet-amount {
+  font-size:24px;
+  font-weight:700;
+  color:#005bb5;
+}
+.swap-info-box {
+  background: #f3f7fe;
+  border-radius:10px;
+  padding: 14px 17px;
+  color:#2a416c;
+  font-size: 14.4px;
+  margin-bottom: 21px;
+}
+.swap-info-header {
+  font-weight:700;
+  margin-bottom:7px;
+  color:#2075c3;
+  font-size: 15px;
+}
+.swap-info-list {
+  margin: 0 0 0 12px;
+  padding: 0;
+}
+.swap-info-list li {
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+.swap-form-title {
+  font-size:16.5px;
+  color:#174b98;
+  font-weight:600;
+  margin:18px 0 12px 0;
+}
+.swap-form {
+  margin-bottom:24px;
+}
+.swap-form-row {
+  display:flex;
+  flex-direction:column;
+  margin-bottom:13px;
+  gap:3px;
+}
+.swap-form-row label {
+  font-size:15px;
+  color:#174b98;
+  margin-bottom: 2px;
+  font-weight:500;
+}
+.swap-form-row input[type="number"],
+.swap-form-row input[type="password"] {
+  padding:10px 14px;
+  font-size:15px;
+  border: 1.3px solid #cfd8e8;
+  border-radius:7px;
+  background: #f6f8fa;
+  color: #1d2339;
+}
+.swap-form-row input:focus {
+  border-color:#2075c3;
+  outline:none;
+  background:#f3f8ff;
+}
+.swap-submit-btn {
+  background:#5d43b2;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:15.7px;
+  font-weight:600;
+  padding:12px 38px;
+  cursor:pointer;
+  float:right;
+  box-shadow:0 2px 8px rgba(30,60,130,0.08);
+  transition:background 0.15s;
+}
+.swap-submit-btn:hover { background:#412282; }
+.swap-total-amount-bar {
+  background: #ad98e9;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin: 25px 0 15px 0;
+  text-align: center;
+  letter-spacing: .7px;
+}
+.swap-table-scroll {
+  width:100%;
+  overflow-x:auto;
+}
+.swap-table {
+  width:100%;
+  background:#fbfbfc;
+  border-radius:10px;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:13.3px;
+  margin-bottom:8px;
+  box-shadow:0 1px 8px rgba(110,159,218,0.07);
+}
+.swap-table th {
+  background: #f5f7fa;
+  font-weight:600;
+  padding: 10px 6px;
+  border-bottom: 1px solid #e3e9f1;
+  color: #654eb5;
+  font-size:13.3px;
+}
+.swap-table td {
+  padding: 8px 7px;
+  border-bottom: 1px solid #eef1f7;
+  color: #22315a;
+  font-size: 13.3px;
+}
+.swap-table tr:last-child td { border-bottom: none !important; }
+@media (max-width:650px){
+  .swap-card {padding:8px 4px;}
+  .swap-bg {padding:0 2vw;}
+  .swap-wallets-row {flex-direction:column;}
+}
+
+
 
