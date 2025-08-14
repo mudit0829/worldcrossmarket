@@ -2222,6 +2222,58 @@ body {
   .financial-bg {padding:0 2vw;}
   .financial-card {padding:12px 2vw;}
 }
+---------Rank and Reward, Support, Presentation and Logout -------------------
+.simplepage-bg {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+}
+.simplepage-breadcrumb {
+  font-size:14px;
+  color:#6e7285;
+  margin-bottom:20px;
+  font-weight:600;
+}
+.simplepage-card {
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 4px 18px rgba(54,91,181,0.09);
+  padding:36px 38px;
+}
+.simplepage-title {
+  font-size:22px;
+  font-weight:700;
+  color:#2868c2;
+  margin-bottom:14px;
+}
+.simplepage-list {
+  padding-left:20px;
+  margin:12px 0 0 0;
+  font-size:15px;
+}
+.simplepage-list li {
+  margin-bottom:6px;
+}
+.simplepage-btn {
+  display:inline-block;
+  background:#2075c3;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:600;
+  padding:10px 24px;
+  text-decoration:none;
+  margin-top:14px;
+  box-shadow:0 2px 8px rgba(30,60,130,0.10);
+  transition:background 0.16s;
+}
+.simplepage-btn:hover {
+  background:#15529c;
+}
+@media(max-width:900px){
+  .simplepage-card {padding:18px 16px;}
+}
 
 
 
