@@ -1,0 +1,48 @@
+<div class="transfer-bg">
+  <div class="transfer-breadcrumb">
+    Transfer / <span>Transfer to Package Wallet</span>
+  </div>
+  <div class="transfer-card">
+    <div class="transfer-wallet-row">
+      <div class="transfer-wallet-box">
+        <div class="transfer-wallet-label">Package Wallet</div>
+        <div class="transfer-wallet-amount">$0</div>
+      </div>
+    </div>
+    <div class="transfer-form-title">Transfer Fund to Package Wallet</div>
+    <form autocomplete="off">
+      <div class="transfer-form-row">
+        <label>Select Wallet</label>
+        <select>
+          <option>--Select--</option>
+        </select>
+      </div>
+      <div class="transfer-form-row">
+        <label>Transfer to (User ID)</label>
+        <input type="text" placeholder="Enter User ID">
+      </div>
+      <div class="transfer-form-row">
+        <label>Enter Amount</label>
+        <input type="number" placeholder="Enter amount">
+      </div>
+      <div class="transfer-form-row">
+        <label>Transaction Password</label>
+        <input type="password" placeholder="******">
+      </div>
+      <div class="transfer-form-row transfer-otp-row">
+        <label>One Time Password</label>
+        <input type="text" placeholder="Enter OTP">
+        <button type="button" class="transfer-otp-btn">Send OTP</button>
+      </div>
+      <div class="transfer-form-row">
+        <label>Remarks</label>
+        <input type="text" placeholder="Remarks...">
+      </div>
+      <div class="transfer-form-row" style="display:flex;align-items:center;gap:10px;">
+        <input type="checkbox" id="checkme2" style="width:18px;height:18px;margin:0;">
+        <label for="checkme2" style="font-size:14px; font-weight:500;color:#666;">Check me out</label>
+      </div>
+      <button type="submit" class="transfer-submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
