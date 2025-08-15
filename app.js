@@ -13,10 +13,11 @@ function loadPage(page) {
     });
 }
 
-function toggleDropdown(elem) {
-  const submenu = elem.nextElementSibling;
-  document.querySelectorAll('.submenu').forEach(sm => {
-    if (sm !== submenu) sm.style.display = 'none';
+function toggleDropdown(el) {
+  // Close all other dropdowns
+  document.querySelectorAll('.has-sub').forEach(li => {
+    if (li !== el.parentElement) li.classList.remove('open');
   });
-  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+  // Toggle this dropdown
+  el.parentElement.classList.toggle('open');
 }
