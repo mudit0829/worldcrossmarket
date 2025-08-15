@@ -32,8 +32,8 @@ body {
 .sidebar-menu li,
 .sidebar-menu .has-sub > div {
   padding: 12px 20px;
-  font-size: 15px; /* same as screenshot */
-  font-weight: 500;
+  font-size: 13px; /* same as screenshot */
+  font-weight: 400;
 }
 
 .sidebar-icon, .submenu-icon {
