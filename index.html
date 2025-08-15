@@ -10,181 +10,158 @@
 <div class="dashboard-wrapper">
 
   <!-- Sidebar -->
-  <aside class="sidebar">
-    <img src="asset/logo.png" class="sidebar-logo" alt="Logo">
 
-    <ul class="sidebar-menu">
-      <li onclick="loadPage('dashboard.html')">
-        <img src="asset/home-alt.svg" class="sidebar-icon">Dashboard
-      </li>
 
-      <li class="has-sub">
-        <div onclick="toggleDropdown(this)">
-          <img src="asset/apple-shortcuts.svg" class="sidebar-icon">Settings
-        </div>
-        <ul class="submenu">
-          <li onclick="loadPage('profile.html')">Profile</li>
-          <li onclick="loadPage('wallet-address.html')">Wallet Address</li>
-          <li onclick="loadPage('arbitrage-id.html')">Arbitrage ID</li>
-        </ul>
-      </li>
-      <li onclick="loadPage('bot-activation.html')">
-  <img src="asset/running.svg" class="sidebar-icon">Bot Activation
-</li>
-       <li onclick="loadPage('trading-investment-fuel.html')">
-  <img src="asset/lifebelt.svg" class="sidebar-icon">Trading Investment (Use Fuel)
-</li>
+   <aside class="sidebar">
+  <img src="asset/logo.png" class="sidebar-logo" alt="Logo">
 
-      <li onclick="loadPage('trading-investment-capital.html')">
-  <img src="asset/lifebelt.svg" class="sidebar-icon">
-  Trading Investment (Use Capital)
-</li>
-      <li onclick="loadPage('angel-investment.html')">
-  <img src="asset/shapes.svg" class="sidebar-icon">
-  Angel Investment
-</li>
-<li onclick="loadPage('cross-investment.html')">
-  <img src="asset/shapes.svg" class="sidebar-icon">
-  Cross Investment
-</li>
-      <li class="has-sub">
-  <div onclick="toggleDropdown(this)">
-    <img src="asset/network-reverse.svg" class="sidebar-icon">
-    Network
-  </div>
-  <ul class="submenu">
-    <li onclick="loadPage('direct-team.html')">
-           Direct Team
+  <ul class="sidebar-menu">
+
+    <li onclick="loadPage('dashboard.html')">
+      <img src="asset/home-alt.svg" class="sidebar-icon">
+      <span class="sidebar-label">Dashboard</span>
     </li>
-    <li onclick="loadPage('all-team.html')">
-           All Team
+
+    <li class="has-sub">
+      <div onclick="toggleDropdown(this)">
+        <img src="asset/apple-shortcuts.svg" class="sidebar-icon">
+        <span class="sidebar-label">Settings</span>
+        <span class="sidebar-arrow">&#9662;</span>
+      </div>
+      <ul class="submenu">
+        <li onclick="loadPage('profile.html')">Profile</li>
+        <li onclick="loadPage('wallet-address.html')">Wallet Address</li>
+        <li onclick="loadPage('arbitrage-id.html')">Arbitrage ID</li>
+      </ul>
     </li>
-    <li onclick="loadPage('business-history.html')">
-            Business History
+
+    <li onclick="loadPage('bot-activation.html')">
+      <img src="asset/running.svg" class="sidebar-icon">
+      <span class="sidebar-label">Bot Activation</span>
     </li>
+
+    <li onclick="loadPage('trading-investment-fuel.html')">
+      <img src="asset/lifebelt.svg" class="sidebar-icon">
+      <span class="sidebar-label">Trading Investment (Use Fuel)</span>
+    </li>
+
+    <li onclick="loadPage('trading-investment-capital.html')">
+      <img src="asset/lifebelt.svg" class="sidebar-icon">
+      <span class="sidebar-label">Trading Investment (Use Capital)</span>
+    </li>
+
+    <li onclick="loadPage('angel-investment.html')">
+      <img src="asset/shapes.svg" class="sidebar-icon">
+      <span class="sidebar-label">Angel Investment</span>
+    </li>
+
+    <li onclick="loadPage('cross-investment.html')">
+      <img src="asset/shapes.svg" class="sidebar-icon">
+      <span class="sidebar-label">Cross Investment</span>
+    </li>
+
+    <li class="has-sub">
+      <div onclick="toggleDropdown(this)">
+        <img src="asset/network-reverse.svg" class="sidebar-icon">
+        <span class="sidebar-label">Network</span>
+        <span class="sidebar-arrow">&#9662;</span>
+      </div>
+      <ul class="submenu">
+        <li onclick="loadPage('direct-team.html')">Direct Team</li>
+        <li onclick="loadPage('all-team.html')">All Team</li>
+        <li onclick="loadPage('business-history.html')">Business History</li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <div onclick="toggleDropdown(this)">
+        <img src="asset/handbag.svg" class="sidebar-icon">
+        <span class="sidebar-label">Incomes</span>
+        <span class="sidebar-arrow">&#9662;</span>
+      </div>
+      <ul class="submenu">
+        <li onclick="loadPage('referral-income.html')">Referral Income</li>
+        <li onclick="loadPage('generation-income.html')">Generation Income</li>
+        <li onclick="loadPage('matching-income.html')">Matching Income</li>
+        <li onclick="loadPage('leadership-pool-income.html')">Leadership Pool Income</li>
+        <li onclick="loadPage('rapid-rise-bonus.html')">Rapid Rise Bonus</li>
+        <li onclick="loadPage('reward-income.html')">Reward Income</li>
+        <li onclick="loadPage('ibi-income.html')">IB Income</li>
+        <li onclick="loadPage('trading-profit-income.html')">Trading Profit Income</li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <div onclick="toggleDropdown(this)">
+        <img src="asset/component.svg" class="sidebar-icon">
+        <span class="sidebar-label">Deposit</span>
+        <span class="sidebar-arrow">&#9662;</span>
+      </div>
+      <ul class="submenu">
+        <li onclick="loadPage('deposit-fund-online.html')">Deposit Fund (Online)</li>
+        <li onclick="loadPage('deposit-invoice.html')">Deposit Invoice</li>
+        <li onclick="loadPage('deposit-fund-offline.html')">Deposit Fund (Offline)</li>
+        <li onclick="loadPage('deposit-invoice-crypto.html')">Deposit Invoice</li>
+      </ul>
+    </li>
+
+    <li class="has-sub">
+      <div onclick="toggleDropdown(this)">
+        <img src="asset/map.svg" class="sidebar-icon">
+        <span class="sidebar-label">Transfer</span>
+        <span class="sidebar-arrow">&#9662;</span>
+      </div>
+      <ul class="submenu">
+        <li onclick="loadPage('transfer-topup-wallet.html')">Transfer to Topup Wallet</li>
+        <li onclick="loadPage('transfer-package-wallet.html')">Transfer to Package Wallet</li>
+        <li onclick="loadPage('transfer-fuel-wallet.html')">Transfer to Fuel Wallet</li>
+        <li onclick="loadPage('transfer-report.html')">Transfer Report</li>
+        <li onclick="loadPage('receive-report.html')">Receive Report</li>
+      </ul>
+    </li>
+
+    <li onclick="loadPage('swap.html')">
+      <img src="asset/coins-swap.svg" class="sidebar-icon">
+      <span class="sidebar-label">Swap</span>
+    </li>
+
+    <li class="has-sub">
+      <div onclick="toggleDropdown(this)">
+        <img src="asset/lifebelt.svg" class="sidebar-icon">
+        <span class="sidebar-label">Financial</span>
+        <span class="sidebar-arrow">&#9662;</span>
+      </div>
+      <ul class="submenu">
+        <li onclick="loadPage('withdraw-fund.html')">Withdraw Fund</li>
+        <li onclick="loadPage('withdraw-trading.html')">Withdraw Trading</li>
+        <li onclick="loadPage('withdraw-report.html')">Withdraw Report</li>
+        <li onclick="loadPage('account-statement.html')">Account Statement</li>
+        <li onclick="loadPage('income-summary.html')">Income Summary</li>
+      </ul>
+    </li>
+
+    <li onclick="loadPage('rank-reward.html')">
+      <img src="asset/trophy.svg" class="sidebar-icon">
+      <span class="sidebar-label">Rank & Reward</span>
+    </li>
+
+    <li onclick="loadPage('support.html')">
+      <img src="asset/chat-bubble-question.svg" class="sidebar-icon">
+      <span class="sidebar-label">Support</span>
+    </li>
+
+    <li onclick="loadPage('presentation.html')">
+      <img src="asset/page-star.svg" class="sidebar-icon">
+      <span class="sidebar-label">Presentation</span>
+    </li>
+
+    <li onclick="loadPage('logout.html')">
+      <img src="asset/off-tag.svg" class="sidebar-icon">
+      <span class="sidebar-label">Logout</span>
+    </li>
+
   </ul>
-</li>
-<li class="has-sub">
-  <div onclick="toggleDropdown(this)">
-    <img src="asset/handbag.svg" class="sidebar-icon">
-    Incomes
-  </div>
-  <ul class="submenu">
-    <li onclick="loadPage('referral-income.html')">
-    Referral Income
-    </li>
-    <li onclick="loadPage('generation-income.html')">
-      Generation Income
-    </li>
-    <li onclick="loadPage('matching-income.html')">
-     Matching Income
-    </li>
-    <li onclick="loadPage('leadership-pool-income.html')">
-      Leadership Pool Income
-    </li>
-    <li onclick="loadPage('rapid-rise-bonus.html')">
-     Rapid Rise Bonus
-    </li>
-    <li onclick="loadPage('reward-income.html')">
-      Reward Income
-    </li>
-    <li onclick="loadPage('ibi-income.html')">
-      IB Income
-    </li>
-    <li onclick="loadPage('trading-profit-income.html')">
-     Trading Profit Income
-    </li>
-  </ul>
-</li>
-      <li class="has-sub">
-  <div onclick="toggleDropdown(this)">
-    <img src="asset/component.svg" class="sidebar-icon">
-    Deposit
-  </div>
-  <ul class="submenu">
-    <li onclick="loadPage('deposit-fund-online.html')">
-     Deposit Fund (Online)
-    </li>
-    <li onclick="loadPage('deposit-invoice.html')">
-      Deposit Invoice
-    </li>
-    <li onclick="loadPage('deposit-fund-offline.html')">
-     Deposit Fund (Offline)
-    </li>
-    <li onclick="loadPage('deposit-invoice-crypto.html')">
-      Deposit Invoice
-    </li>
-  </ul>
-</li>
-      <li class="has-sub">
-  <div onclick="toggleDropdown(this)">
-    <img src="asset/map.svg" class="sidebar-icon">
-    Transfer
-  </div>
-  <ul class="submenu">
-    <li onclick="loadPage('transfer-topup-wallet.html')">
-     Transfer to Topup Wallet
-    </li>
-    <li onclick="loadPage('transfer-package-wallet.html')">
-    Transfer to Package Wallet
-    </li>
-    <li onclick="loadPage('transfer-fuel-wallet.html')">
-     Transfer to Fuel Wallet
-    </li>
-    <li onclick="loadPage('transfer-report.html')">
-      Transfer Report
-    </li>
-    <li onclick="loadPage('receive-report.html')">
-      Receive Report
-    </li>
-  </ul>
-</li>
-      <li onclick="loadPage('swap.html')">
-  <img src="asset/coins-swap.svg" class="sidebar-icon">
-  Swap
-</li>
-<li class="has-sub">
-  <div onclick="toggleDropdown(this)">
-    <img src="asset/lifebelt.svg" class="sidebar-icon">
-    Financial
-  </div>
-  <ul class="submenu">
-    <li onclick="loadPage('withdraw-fund.html')">
-      Withdraw Fund
-    </li>
-    <li onclick="loadPage('withdraw-trading.html')">
-      Withdraw Trading
-    </li>
-    <li onclick="loadPage('withdraw-report.html')">
-      Withdraw Report
-    </li>
-    <li onclick="loadPage('account-statement.html')">
-     Account Statement
-    </li>
-    <li onclick="loadPage('income-summary.html')">
-      Income Summary
-    </li>
-  </ul>
-</li>
-<li onclick="loadPage('rank-reward.html')">
-  <img src="asset/trophy.svg" class="sidebar-icon">
-  Rank & Reward
-</li>
-
-<li onclick="loadPage('support.html')">
-  <img src="asset/chat-bubble-question.svg" class="sidebar-icon">
-  Support
-</li>
-
-<li onclick="loadPage('presentation.html')">
-  <img src="asset/page-star.svg" class="sidebar-icon">
-  Presentation
-</li>
-
-<li onclick="loadPage('logout.html')">
-  <img src="asset/off-tag.svg" class="sidebar-icon">
-  Logout
-</li>
+</aside>
       <!-- Repeat this pattern for all other menu items & dropdowns -->
     </ul>
   </aside>
