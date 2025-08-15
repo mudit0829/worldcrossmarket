@@ -46,27 +46,51 @@ body {
 .sidebar-menu li:hover,
 .sidebar-menu .has-sub > div:hover,
 .submenu li:hover {
-  background: #eef6ff;
+ /* Sidebar container itself */
+.sidebar {
+  width: 260px; /* fixed width for consistent alignment */
+  background: #fff;
+  border-right: 1px solid #e3e8ee;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.04);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center logo horizontally */
 }
 
-.submenu {
-  display: none;
-  background: #f7f9fc;
-}
-
-.has-sub.open > .submenu {
+/* Logo adjustments */
+.sidebar-logo {
+  width: 120px;           /* <= Adjust logo visual size here */
+  height: auto;           /* keep proportions */
   display: block;
+  margin: 20px auto 18px; /* top and bottom spacing */
+  object-fit: contain;    /* so it fits neatly */
 }
 
-.submenu li {
+/* Menu list alignment fix */
+.sidebar-menu {
+  width: 100%; /* makes li items stretch full sidebar width */
+}
+
+.sidebar-menu li,
+.sidebar-menu .has-sub > div {
   display: flex;
   align-items: center;
-  padding: 11px 20px 11px 44px;
-  font-size: 14px;
-  color: #436094;
-  gap: 12px;
+  padding: 13px 20px;
+  gap: 14px;
+  font-size: 15px;
+  color: #202642;
   cursor: pointer;
+  transition: background 0.12s ease;
 }
+
+/* Icons uniform size */
+.sidebar-icon, .submenu-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 
 .main-content {
   flex: 1;
