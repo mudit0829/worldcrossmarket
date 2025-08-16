@@ -3,13 +3,10 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #f4f6fa;
 }
-
 .dashboard-wrapper {
   display: flex;
   height: 100vh;
 }
-
-/* Sidebar container */
 .sidebar {
   width: 260px;
   background: #fff;
@@ -20,17 +17,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-/* Sidebar logo */
 .sidebar-logo {
-  width: 200px;
+  width: 120px;
   height: auto;
   display: block;
   margin: 24px auto 18px;
   object-fit: contain;
 }
-
-/* Menu list resets */
 .sidebar-menu,
 .submenu {
   list-style: none;
@@ -38,43 +31,28 @@ body {
   margin: 0;
   width: 100%;
 }
-
-/* Main menu items & dropdown triggers */
 .sidebar-menu li,
 .sidebar-menu .has-sub > div {
   display: flex;
-  align-items: center;   /* Vertical center for everything */
+  align-items: center;
   padding: 13px 20px;
   gap: 14px;
   font-size: 15px;
   color: #202642;
   cursor: pointer;
-  transition: background 0.12s ease;
+  transition: background 0.12s;
 }
-
-/* Hover effect */
-.sidebar-menu li:hover,
-.sidebar-menu .has-sub > div:hover,
-.submenu li:hover {
-  background: #eef6ff;
-}
-
-/* Icon size */
 .sidebar-icon,
 .submenu-icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
-
-/* Label flex so arrow stays to right */
 .sidebar-label {
   flex: 1;
   text-align: left;
   display: inline-block;
 }
-
-/* Dropdown arrow alignment */
 .sidebar-arrow {
   margin-left: 6px;
   align-self: center;
@@ -83,19 +61,23 @@ body {
   line-height: 1;
   display: inline-block;
 }
-
-/* Submenu container */
+.sidebar-menu li:hover,
+.sidebar-menu .has-sub > div:hover,
+.submenu li:hover {
+  background: #eef6ff;
+}
 .submenu {
   display: none;
   background: #f7f9fc;
+  width: 100%;
+  position: static;
+  flex-direction: column;
+  box-shadow: none;
+  border-radius: 0;
 }
-
-/* Show submenu when parent is open */
 .has-sub.open > .submenu {
-  display: block;
+  display: flex;
 }
-
-/* Submenu item styling */
 .submenu li {
   display: flex;
   align-items: center;
