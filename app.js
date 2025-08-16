@@ -14,13 +14,11 @@ function loadPage(page) {
 }
 
 function toggleDropdown(el) {
-  const li = el.parentElement;
-  li.classList.toggle('open');
-
-  // Optional: Close others
-  document.querySelectorAll('.sidebar-menu > li.open').forEach(otherLi => {
-    if (otherLi !== li) {
-      otherLi.classList.remove('open');
-    }
+  var li = el.parentElement;
+  var menu = li.parentElement;
+  // Close other open menus
+  Array.from(menu.querySelectorAll('.has-sub.open')).forEach(openLi => {
+    if (openLi !== li) openLi.classList.remove('open');
   });
+  li.classList.toggle('open');
 }
