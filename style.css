@@ -133,6 +133,23 @@ body {
   background: #ececfc;
   color: #543cac;
 }
+.submenu, .sidebar-menu .submenu {
+  display: none;
+  position: static !important;
+  width: 100% !important;
+  left: auto !important;
+  top: auto !important;
+  float: none !important;
+  background: transparent;
+  margin: 0; padding: 0;
+  box-shadow: none !important;
+  border-left: 2.5px solid #ede8fc;
+}
+.has-sub.open > .submenu {
+  display: flex !important;
+  flex-direction: column;
+}
+
 
 .main-content {
   flex: 1;
