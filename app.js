@@ -14,10 +14,13 @@ function loadPage(page) {
 }
 
 function toggleDropdown(el) {
-  var li = el.parentElement;
-  // If you want only one dropdown open at a time:
-  document.querySelectorAll('.has-sub').forEach(function(other) {
-    if(other !== li) other.classList.remove('open');
-  });
+  const li = el.parentElement;
   li.classList.toggle('open');
+
+  // Optional: Close others
+  document.querySelectorAll('.sidebar-menu > li.open').forEach(otherLi => {
+    if (otherLi !== li) {
+      otherLi.classList.remove('open');
+    }
+  });
 }
