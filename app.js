@@ -14,10 +14,9 @@ function loadPage(page) {
 }
 
 function toggleDropdown(el) {
-  // Close all other dropdowns
   document.querySelectorAll('.has-sub').forEach(li => {
     if (li !== el.parentElement) li.classList.remove('open');
   });
-  // Toggle this dropdown
   el.parentElement.classList.toggle('open');
 }
+
