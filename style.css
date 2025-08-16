@@ -1,4 +1,3 @@
-/* Base and layout */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -9,164 +8,138 @@ body {
   height: 100vh;
 }
 
-/* Sidebar container */
+/* Sidebar */
 .sidebar {
-  width: 260px;
+  width: 245px;
   background: #fff;
   border-right: 1px solid #e6ebf1;
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.04);
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  overflow-y: auto;
-  user-select: none;
 }
-
-/* Logo */
 .sidebar-logo {
-  width: 130px;
-  margin: 25px auto 20px auto;
+  width: 118px;
+  margin: 20px auto 14px auto;
   display: block;
   object-fit: contain;
 }
 
-/* Section headers */
-.sidebar .sidebar-menu .sidebar-section {
-  font-size: 11px;
-  color: #949ab3;
-  text-transform: uppercase;
-  padding: 15px 30px 6px 30px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  border-bottom: 1px solid #e6ebf1;
-}
-
-/* Main menu list reset */
 .sidebar-menu,
 .submenu {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   width: 100%;
 }
 
-/* Main menu items and clickable header for submenus */
+/* Section headings */
+.sidebar-section {
+  font-size: 11px;
+  color: #b0b5c3;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 16px 32px 8px 32px;
+  background: #fff;
+  border: none;
+  margin: 0;
+  cursor: default;
+}
+
 .sidebar-menu > li,
 .sidebar-menu > li > div {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 13px 30px;
-  color: #212e4c;
+  gap: 13px;
+  padding: 12px 32px;
+  color: #22314d;
+  font-size: 15.5px;
   font-weight: 500;
-  font-size: 15px;
   cursor: pointer;
-  position: relative;
-  transition: background-color 0.2s ease;
   border-radius: 8px;
+  background: none;
+  user-select: none;
+  transition: background .16s;
 }
 
 .sidebar-menu > li:hover,
 .sidebar-menu > li > div:hover {
-  background-color: #eef5ff;
+  background: #eef4fc;
 }
 
-/* For submenu triggers */
-.sidebar-menu > li > div {
-  user-select: none;
-}
+.sidebar-icon { width: 20px; height: 20px; flex-shrink: 0; }
 
-/* Active menu item styling */
-.sidebar-menu > li.active > div,
-.sidebar-menu > li.active {
-  background-color: #ebeefa;
-  color: #543cac;
-  font-weight: 700;
-}
-
-/* Icons */
-.sidebar-icon,
-.submenu-icon {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  stroke: currentColor;
-}
-
-/* Labels */
+/* Main item label */
 .sidebar-label {
-  flex-grow: 1;
+  flex: 1;
+  min-width: 0;
   text-align: left;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Dropdown arrow */
 .sidebar-arrow {
-  font-size: 14px;
+  font-size: 13px;
   color: #949ab3;
-  transition: transform 0.25s ease;
+  margin-left: auto;
+  transition: transform 0.22s;
+  display: inline-block;
+  transform: rotate(0deg);
+  /* Always start as right arrow ▸ */
 }
-
-/* Rotate arrow when submenu open */
-.sidebar-menu > li.active > div .sidebar-arrow,
-.sidebar-menu > li.open > div .sidebar-arrow {
-  transform: rotate(180deg);
+/* Accordion open: rotate arrow down */
+.has-sub.open .sidebar-arrow {
+  transform: rotate(90deg);
   color: #543cac;
 }
 
-/* Submenu */
+.has-sub.open > div,
+.sidebar-menu > li.active,
+.sidebar-menu > li.open > div {
+  background: #ede8fc;
+  color: #543cac;
+}
+
+.has-sub.open > div .sidebar-icon,
+.has-sub.open > div .sidebar-arrow {
+  color: #543cac;
+}
+
 .submenu {
   display: none;
   flex-direction: column;
-  padding-left: 6px; /* Minor indent from main items */
-  border-left: 3px solid #ebeefa;
-  margin-bottom: 12px;
+  background: #fff;
+  margin: 0; padding: 0;
+  border-left: 2.5px solid #ede8fc;
 }
-
-/* Show submenu when open */
-.sidebar-menu > li.open > .submenu {
+.has-sub.open > .submenu {
   display: flex;
 }
 
-/* Submenu items */
-.submenu > li {
-  padding: 10px 0 10px 45px;
-  cursor: pointer;
-  font-weight: 500;
+.submenu li {
   font-size: 14px;
-  color: #5c5f7c;
-  border-radius: 4px;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  color: #523f92;
+  padding: 9px 32px 9px 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.13s, color 0.15s;
+  position: relative;
 }
-
-.submenu > li:hover {
-  background-color: #ececfc;
+.submenu li:hover {
+  background: #ececfc;
   color: #543cac;
 }
 
-/* Scrollbar customization */
-.sidebar::-webkit-scrollbar {
-  width: 8px;
-}
-.sidebar::-webkit-scrollbar-track {
-  background: transparent;
-}
-.sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(45, 47, 62, 0.1);
-  border-radius: 4px;
-}
-
-/* Content area */
-.main-content {
-  flex-grow: 1;
-  padding: 25px 30px;
-  background-color: #f4f6fa;
-  overflow-y: auto;
-}
 .main-content {
   flex: 1;
-  padding: 22px 28px;
   min-width: 0;
+  padding: 22px 32px 22px 34px;
+  background: #f4f6fa;
+  overflow-y: auto;
 }
 
 .referral-container { display:flex; justify-content:flex-end; margin-bottom:18px; }
