@@ -12,7 +12,6 @@ body {
   background: #fff;
   border-right: 1px solid #e3e8ee;
   box-shadow: 2px 0 12px rgba(0,0,0,0.04);
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +19,8 @@ body {
 .sidebar-logo {
   width: 120px;
   height: auto;
+  margin: 24px auto 18px auto;
   display: block;
-  margin: 24px auto 18px;
   object-fit: contain;
 }
 .sidebar-menu,
@@ -41,25 +40,25 @@ body {
   color: #202642;
   cursor: pointer;
   transition: background 0.12s;
+  position: relative;
 }
-.sidebar-icon,
-.submenu-icon {
+.sidebar-icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
 .sidebar-label {
-  flex: 1;
+  flex: 1 1 auto;
   text-align: left;
-  display: inline-block;
+  display: block;
 }
 .sidebar-arrow {
-  margin-left: 6px;
-  align-self: center;
+  margin-left: auto;
   font-size: 13px;
   color: #949dbb;
-  line-height: 1;
   display: inline-block;
+  line-height: 1;
+  align-self: center;
 }
 .sidebar-menu li:hover,
 .sidebar-menu .has-sub > div:hover,
@@ -68,12 +67,11 @@ body {
 }
 .submenu {
   display: none;
+  flex-direction: column;
   background: #f7f9fc;
   width: 100%;
   position: static;
-  flex-direction: column;
   box-shadow: none;
-  border-radius: 0;
 }
 .has-sub.open > .submenu {
   display: flex;
@@ -84,8 +82,8 @@ body {
   padding: 11px 20px 11px 44px;
   font-size: 14px;
   color: #436094;
-  gap: 12px;
   cursor: pointer;
+  gap: 12px;
 }
 
 /* Main content area remains */
