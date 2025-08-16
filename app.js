@@ -15,9 +15,9 @@ function loadPage(page) {
 
 function toggleDropdown(el) {
   var li = el.parentElement;
-  li.classList.toggle('open');
-  // Optionally, close others:
+  // If you want only one dropdown open at a time:
   document.querySelectorAll('.has-sub').forEach(function(other) {
-    if (other !== li) other.classList.remove('open');
+    if(other !== li) other.classList.remove('open');
   });
+  li.classList.toggle('open');
 }
